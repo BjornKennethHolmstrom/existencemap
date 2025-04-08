@@ -10,11 +10,57 @@
   import { quintOut } from 'svelte/easing';
   import { getRoute, addLangToRoute } from '$lib/utils/hashRoutes';
 
-  $: t = getTranslation($langStore, 'common');
+  // Create an optimized version of the map items that we'll use
+  const mapItems = [
+    { path: 'map/consciousness', emoji: '🧠', key: 'consciousness' },
+    { path: 'map/development', emoji: '🌱', key: 'development' },
+    { path: 'map/mysticalStates', emoji: '🧘', key: 'mysticalStates' },
+    { path: 'map/interbeing', emoji: '💫', key: 'interbeing' },
+    { path: 'map/cosmos', emoji: '🔭', key: 'cosmos' },
+    { path: 'map/unknown', emoji: '♾️', key: 'unknown' },
+    { path: 'map/reflection', emoji: '🪞', key: 'reflection' },
+    { path: 'map/spiral', emoji: '🌀', key: 'spiral' },
+    { path: 'map/feminine', emoji: '🌺', key: 'feminine' },
+    { path: 'map/other', emoji: '👽', key: 'other' },
+    { path: 'map/beyondReligion', emoji: '🕊️', key: 'beyondReligion' },
+    { path: 'map/timelessness', emoji: '🕰️', key: 'timelessness' }
+  ];
+
+  const mainNavItems = [
+    { path: 'map', emoji: '🗺️', key: 'map', hasSubmenu: true },
+    { path: 'articles', emoji: '📝', key: 'articles', hasSubmenu: false },
+    { path: 'about', emoji: '📖', key: 'about', hasSubmenu: false },
+    { path: 'credits', emoji: '🌟', key: 'credits', hasSubmenu: false }
+  ];
+  
+  // Use a non-reactive variable for translations - we'll update it manually when needed
+  let t;
+  $: { 
+    t = getTranslation($langStore, 'common');
+  }
 
   let isDark = true;
   let mapOpen = false;
   let mobileMenuOpen = false;
+
+  // Precompute some URLs for better performance
+  let homeUrl, mapUrl, articlesUrl, aboutUrl, creditsUrl;
+  $: {
+    homeUrl = addLangToRoute(getRoute(''), $langStore);
+    mapUrl = addLangToRoute(getRoute('map'), $langStore);
+    articlesUrl = addLangToRoute(getRoute('articles'), $langStore);
+    aboutUrl = addLangToRoute(getRoute('about'), $langStore);
+    creditsUrl = addLangToRoute(getRoute('credits'), $langStore);
+  }
+
+  // Cache map item URLs (only recomputed when language changes)
+  let mapItemUrls = [];
+  $: {
+    mapItemUrls = mapItems.map(item => ({
+      ...item,
+      url: addLangToRoute(getRoute(item.path), $langStore)
+    }));
+  }
 
   // Safe theme check and application on mount
   onMount(() => {
@@ -64,38 +110,11 @@
       history.pushState({}, '', url.toString());
     }
   }
-
-  const mapItems = [
-    { path: 'map/consciousness', emoji: '🧠', key: 'consciousness' },
-    { path: 'map/development', emoji: '🌱', key: 'development' },
-    { path: 'map/mysticalStates', emoji: '🧘', key: 'mysticalStates' },
-    { path: 'map/interbeing', emoji: '💫', key: 'interbeing' },
-    { path: 'map/cosmos', emoji: '🔭', key: 'cosmos' },
-    { path: 'map/unknown', emoji: '♾️', key: 'unknown' },
-    { path: 'map/reflection', emoji: '🪞', key: 'reflection' },
-    { path: 'map/spiral', emoji: '🌀', key: 'spiral' },
-    { path: 'map/feminine', emoji: '🌺', key: 'feminine' },
-    { path: 'map/other', emoji: '👽', key: 'other' },
-    { path: 'map/beyondReligion', emoji: '🕊️', key: 'beyondReligion' },
-    { path: 'map/timelessness', emoji: '🕰️', key: 'timelessness' }
-  ];
-
-  const mainNavItems = [
-    { path: 'map', emoji: '🗺️', key: 'map', hasSubmenu: true },
-    { path: 'articles', emoji: '📝', key: 'articles', hasSubmenu: false },
-    { path: 'about', emoji: '📖', key: 'about', hasSubmenu: false },
-    { path: 'credits', emoji: '🌟', key: 'credits', hasSubmenu: false }
-  ];
-  
-  // Helper function to get current route URL with hash and language if needed
-  function getNavUrl(path) {
-    return addLangToRoute(getRoute(path), $langStore);
-  }
 </script>
 
 <header class="sticky top-0 w-full py-4 px-4 md:px-6 flex items-center justify-between text-sm font-semibold tracking-wide text-indigo-900 dark:text-indigo-100 z-50 bg-white/90 dark:bg-indigo-950/90 backdrop-blur-sm shadow-sm">
   <!-- Logo (always visible) -->
-  <a href={getNavUrl('')} class="text-lg font-bold hover:text-violet-600 transition">🌌 Existencemap</a>
+  <a href={homeUrl} class="text-lg font-bold hover:text-violet-600 transition">🌌 Existencemap</a>
 
   <!-- Desktop Navigation -->
   <div class="hidden md:flex items-center space-x-6">
@@ -108,7 +127,7 @@
       >
         <!-- Map Link - Changed to navigate when clicked -->
         <a
-          href={getNavUrl('map')}
+          href={mapUrl}
           class="font-bold hover:text-violet-500 transition block px-2 py-2"
           aria-haspopup="true"
           aria-expanded={mapOpen}
@@ -122,9 +141,9 @@
             ${mapOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}
           `}
         >
-          {#each mapItems as { path, emoji, key }}
+          {#each mapItemUrls as { url, emoji, key }}
             <a
-              href={getNavUrl(path)}
+              href={url}
               class="block px-4 py-1 whitespace-nowrap hover:bg-indigo-50 dark:hover:bg-indigo-800 hover:shadow-md hover:shadow-violet-300/30 dark:hover:shadow-violet-500/20 rounded text-sm transition"
               on:click={() => mapOpen = false}
             >
@@ -135,9 +154,9 @@
       </div>
 
       <!-- Other Desktop Nav Links -->
-      <a href={getNavUrl('articles')} class="font-bold hover:text-violet-500 transition">📝 {t.articles || 'Articles'}</a>
-      <a href={getNavUrl('about')} class="font-bold hover:text-violet-500 transition">📖 {t.about}</a>
-      <a href={getNavUrl('credits')} class="font-bold hover:text-violet-500 transition">🌟 {t.credits}</a>
+      <a href={articlesUrl} class="font-bold hover:text-violet-500 transition">📝 {t.articles || 'Articles'}</a>
+      <a href={aboutUrl} class="font-bold hover:text-violet-500 transition">📖 {t.about}</a>
+      <a href={creditsUrl} class="font-bold hover:text-violet-500 transition">🌟 {t.credits}</a>
     </nav>
 
     <!-- Language Selector -->
@@ -192,7 +211,7 @@
   </div>
 </header>
 
-<!-- Mobile Menu Overlay -->
+<!-- Mobile Menu Overlay - Only render when needed -->
 {#if mobileMenuOpen}
   <div 
     transition:slide={{ duration: 300, easing: quintOut }}
@@ -207,7 +226,7 @@
             <div class="flex justify-between items-center">
               <!-- Map link - will navigate to map page -->
               <a 
-                href={getNavUrl(path)} 
+                href={mapUrl} 
                 class="font-bold py-2 hover:text-violet-500 transition"
                 on:click={() => mobileMenuOpen = false}
               >
@@ -228,9 +247,9 @@
             
             {#if mapOpen}
               <div class="pl-4 py-2 space-y-3 bg-indigo-50 dark:bg-indigo-900/30 rounded-lg mt-2">
-                {#each mapItems as { path, emoji, key }}
+                {#each mapItemUrls as { url, emoji, key }}
                   <a 
-                    href={getNavUrl(path)} 
+                    href={url} 
                     class="block py-2 hover:text-violet-500 transition"
                     on:click={() => { mobileMenuOpen = false; mapOpen = false; }}
                   >
@@ -243,11 +262,11 @@
         {:else}
           <!-- Regular Nav Item -->
           <a 
-            href={getNavUrl(path)} 
+            href={key === 'articles' ? articlesUrl : (key === 'about' ? aboutUrl : creditsUrl)} 
             class="block font-bold py-2 border-b border-indigo-100 dark:border-indigo-800 hover:text-violet-500 transition"
             on:click={() => mobileMenuOpen = false}
           >
-            {emoji} {t[key] ?? key}
+            {emoji} {t[key]}
           </a>
         {/if}
       {/each}
