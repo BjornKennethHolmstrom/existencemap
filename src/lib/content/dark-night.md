@@ -3,7 +3,7 @@ title: The Dark Night of the Soul
 subtitle: The Shadow Side of Spiritual Awakening
 domain: mysticalStates
 publishDate: 2024-04-03
-author: Björn Kenneth Holmström
+author: Claude 3.7 Sonnet
 ---
 
 ### The Shadow Side of Spiritual Awakening

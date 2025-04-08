@@ -3,7 +3,7 @@ title: The Symbiocene
 subtitle: A Post-Anthropocene Vision
 domain: interbeing
 publishDate: 2024-04-01
-author: Björn Kenneth Holmström
+author: Claude 3.7 Sonnet
 ---
 
 ### A Post-Anthropocene Vision

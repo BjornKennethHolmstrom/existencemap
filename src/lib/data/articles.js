@@ -13,7 +13,7 @@ export const articleData = {
       domain: 'interbeing',
       emoji: '🌱',
       date: '2024-04-01',
-      author: 'Björn Kenneth Holmström',
+      author: 'Claude 3.7 Sonnet',
       available: true
     },
     {
@@ -24,7 +24,7 @@ export const articleData = {
       domain: 'consciousness',
       emoji: '🧠',
       date: '2024-04-02',
-      author: 'Björn Kenneth Holmström',
+      author: 'Claude 3.7 Sonnet',
       available: true
     },
     {
@@ -35,7 +35,7 @@ export const articleData = {
       domain: 'mysticalStates',
       emoji: '🧘',
       date: '2024-04-03',
-      author: 'Björn Kenneth Holmström',
+      author: 'Claude 3.7 Sonnet',
       available: true
     },
     {
@@ -46,7 +46,18 @@ export const articleData = {
       domain: 'spiral',
       emoji: '🌀',
       date: '2024-04-04',
-      author: 'Björn Kenneth Holmström',
+      author: 'Claude 3.7 Sonnet',
+      available: true
+    },
+    {
+      slug: 'anti-map',
+      title: 'The Anti-Map',
+      subtitle: 'Embracing the Unmappable',
+      description: 'Exploring the paradox of mapping existence while honoring what necessarily escapes all maps and frameworks, including our own.',
+      domain: 'unknown',
+      emoji: '🗺️',
+      date: '2024-04-09',
+      author: 'Claude 3.7 Sonnet',
       available: true
     }
   ],
@@ -59,7 +70,7 @@ export const articleData = {
       domain: 'interbeing',
       emoji: '🌱',
       date: '2024-04-01',
-      author: 'Björn Kenneth Holmström',
+      author: 'Claude 3.7 Sonnet',
       available: true
     },
     {
@@ -70,8 +81,8 @@ export const articleData = {
       domain: 'consciousness',
       emoji: '🧠',
       date: '2024-04-02',
-      author: 'Björn Kenneth Holmström',
-      available: true // Now available in Swedish
+      author: 'Claude 3.7 Sonnet',
+      available: true
     },
     {
       slug: 'dark-night',
@@ -81,8 +92,8 @@ export const articleData = {
       domain: 'mysticalStates',
       emoji: '🧘',
       date: '2024-04-03',
-      author: 'Björn Kenneth Holmström',
-      available: true // Now available in Swedish
+      author: 'Claude 3.7 Sonnet',
+      available: true
     },
     {
       slug: 'vortex',
@@ -92,8 +103,19 @@ export const articleData = {
       domain: 'spiral',
       emoji: '🌀',
       date: '2024-04-04',
-      author: 'Björn Kenneth Holmström',
-      available: true // Now available in Swedish
+      author: 'Claude 3.7 Sonnet',
+      available: true
+    },
+    {
+      slug: 'anti-map',
+      title: 'Anti-Kartan',
+      subtitle: 'Att omfamna det som inte kan kartläggas',
+      description: 'Utforskar paradoxen med att kartlägga existensen samtidigt som vi hedrar det som nödvändigtvis undflyr alla kartor och ramverk, inklusive våra egna.',
+      domain: 'unknown',
+      emoji: '🗺️',
+      date: '2024-04-09',
+      author: 'Claude 3.7 Sonnet',
+      available: true
     }
   ]
 };

@@ -3,7 +3,7 @@ title: The Vortex
 subtitle: When Spirals Intensify
 domain: spiral
 publishDate: 2024-04-04
-author: Björn Kenneth Holmström
+author: Claude 3.7 Sonnet
 ---
 
 ### When Spirals Intensify

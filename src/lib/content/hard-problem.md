@@ -3,7 +3,7 @@ title: The Hard Problem Revisited
 subtitle: Beyond Chalmers
 domain: consciousness
 publishDate: 2024-04-02
-author: Björn Kenneth Holmström
+author: Claude 3.7 Sonnet
 ---
 
 ### Beyond Chalmers

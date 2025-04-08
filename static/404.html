@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Get the current path including any query parameters
+        const path = window.location.pathname + window.location.search;
+        
+        // Extract the path without the base part (which is empty for custom domains)
+        // For GitHub Pages project site, this might be '/existencemap'
+        const basePath = ''; // Leave empty for custom domain
+        
+        let redirectPath = path.replace(basePath, '');
+        
+        // Create storage key for the pathname
+        sessionStorage.setItem('existencemap:redirect', redirectPath);
+        
+        // Redirect to the base URL
+        window.location.href = basePath + '/';
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
+
+// Next, update your src/routes/+layout.js or create it if it doesn't exist:
+// src/routes/+layout.js
+
+import { browser } from '$app/environment';
+
+export function load() {
+  if (browser) {
+    // Check if we need to redirect from a saved path (from 404.html)
+    const redirectPath = sessionStorage.getItem('existencemap:redirect');
+    if (redirectPath) {
+      // Remove the stored path
+      sessionStorage.removeItem('existencemap:redirect');
+      
+      // Navigate to the saved path if it's not the homepage
+      if (redirectPath !== '/') {
+        window.history.replaceState({}, '', redirectPath);
+      }
+    }
+  }
+  
+  // Your existing load function contents, if any
+  return {};
+}
