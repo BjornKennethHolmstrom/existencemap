@@ -1,0 +1,20 @@
+{
+  "creditsTitle": "Tack",
+  "intro": "Detta projekt har formats av många sinnen, verktyg och traditioner – vävda samman i en väv av tacksamhet.",
+  "bjorn": "Björn Kenneth Holmström",
+  "bjornDesc": "Vision, koncept, utveckling, design och hjärta bakom projektet Existenskartan.",
+  "chatgpt": "ChatGPT (OpenAI)",
+  "chatgptDesc": "Kreativt medförfattarskap, strukturering och implementeringshjälp – både mystisk och teknisk.",
+  "claude": "Claude Sonnet (Anthropic)",
+  "claudeDesc": "Filosofisk och poetisk följeslagare under utformningen av grundläggande teman och texter.",
+  "deepseek": "DeepSeek (deepseek.com)",
+  "deepseekDesc": "Värdefulla insikter för sidan om det okända",
+  "svelte": "SvelteKit",
+  "svelteDesc": "Webbramverket som gjorde utveckling elegant, snabb och rolig.",
+  "tailwind": "Tailwind CSS",
+  "tailwindDesc": "Design på ett lekande lätt sätt med utility-first-magik.",
+  "mystics": "Mystiker, lärare & sökare",
+  "mysticsDesc": "Alla som vågat blicka in i det okända och bringa ljus tillbaka.",
+  "signature": "Med kärlek, ljus och tacksamhet."
+}
+

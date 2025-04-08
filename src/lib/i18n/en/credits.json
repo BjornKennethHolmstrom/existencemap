@@ -1,0 +1,20 @@
+{
+  "creditsTitle": "Credits",
+  "intro": "This project was shaped by many minds, tools, and traditions — all woven into a tapestry of gratitude.",
+  "bjorn": "Björn Kenneth Holmström",
+  "bjornDesc": "Vision, concept, development, design, and heart behind the ExistenceMap project.",
+  "chatgpt": "ChatGPT (OpenAI)",
+  "chatgptDesc": "Creative co-writing, structuring, and implementation assistance — both mystical and technical.",
+  "claude": "Claude Sonnet (Anthropic)",
+  "claudeDesc": "Philosophical and poetic companion during the conception of foundational themes and texts.",
+  "deepseek": "DeepSeek (deepseek.com)",
+  "deepseekDesc": "Valuable insights for the page about the unknown",
+  "svelte": "SvelteKit",
+  "svelteDesc": "The web framework that made development elegant, fast, and joyful.",
+  "tailwind": "Tailwind CSS",
+  "tailwindDesc": "Effortless design with utility-first magic.",
+  "mystics": "Mystics, teachers & seekers",
+  "mysticsDesc": "All those who have dared to peer into the unknown and bring back light.",
+  "signature": "With love, light, and gratitude."
+}
+

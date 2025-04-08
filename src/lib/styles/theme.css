@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: special effects zone */
+.mystic-bg {
+  @apply bg-gradient-to-br from-indigo-100 via-white to-purple-200
+    dark:from-indigo-900 dark:via-black dark:to-purple-950;
+}
+
+.mystic-text {
+  @apply text-indigo-800 dark:text-indigo-200;
+}
+
