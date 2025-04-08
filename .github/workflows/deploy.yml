@@ -35,6 +35,9 @@ jobs:
       - name: Build
         run: NODE_ENV=production npm run build
 
+      - name: Copy CNAME to build directory
+        run: cp CNAME build/
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
