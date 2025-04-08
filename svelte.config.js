@@ -25,7 +25,6 @@ const config = {
       $i18n: 'src/lib/i18n'
     },
     // Add hash-based routing
-    trailingSlash: 'never',
     paths: {
       base: '',
       relative: false
