@@ -70,6 +70,28 @@ export const articleData = {
       date: "2025-04-09",
       domain: "interbeing",
       available: true
+    },
+    {
+      slug: 'mirror-beyond-map',
+      title: 'The Mirror Beyond the Map',
+      subtitle: 'When the alien, the stranger, and the unknown reflect ourselves back to us',
+      description: 'An exploration of how encounters with otherness—from aliens to AI, dreams to psychedelics—serve as mirrors revealing aspects of ourselves we could never see otherwise.',
+      domain: 'other',
+      emoji: '👽',
+      date: '2025-04-09',
+      author: 'Claude 3.7 Sonnet',
+      available: true
+    },
+    {
+      slug: 'vertical-moment',
+      title: 'Living the Vertical Moment',
+      subtitle: 'Beyond time\'s horizontal flow lies a dimension of depth',
+      description: 'An exploration of how we can access timelessness through the vertical dimension of the present moment, dropping from time\'s horizontal flow into the infinite depth available in each instant.',
+      domain: 'timelessness',
+      emoji: '🕰️',
+      date: '2025-04-10',
+      author: 'Claude 3.7 Sonnet',
+      available: true
     }
   ],
   sv: [
@@ -137,6 +159,28 @@ export const articleData = {
       author: "ChatGPT 4o",
       date: "2025-04-09",
       domain: "interbeing",
+      available: true
+    },
+    {
+      slug: 'mirror-beyond-map',
+      title: 'Spegeln Bortom Kartan',
+      subtitle: 'När det främmande, den okände och det okända speglar oss tillbaka till oss själva',
+      description: 'En utforskning av hur möten med annorlundaskap—från utomjordingar till AI, drömmar till psykedeliska upplevelser—fungerar som speglar som avslöjar aspekter av oss själva som vi annars aldrig skulle se.',
+      domain: 'other',
+      emoji: '👽',
+      date: '2025-04-09',
+      author: 'Claude 3.7 Sonnet',
+      available: true
+    },
+    {
+      slug: 'vertical-moment',
+      title: 'Att Leva det Vertikala Ögonblicket',
+      subtitle: 'Bortom tidens horisontella flöde finns en dimension av djup',
+      description: 'En utforskning av hur vi kan nå tidlöshet genom nuets vertikala dimension, genom att sjunka från tidens horisontella flöde ner i det oändliga djup som finns tillgängligt i varje ögonblick.',
+      domain: 'timelessness',
+      emoji: '🕰️',
+      date: '2025-04-10',
+      author: 'Claude 3.7 Sonnet',
       available: true
     }
   ]
