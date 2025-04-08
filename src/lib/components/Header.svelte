@@ -75,7 +75,9 @@
     { path: 'map/reflection', emoji: '🪞', key: 'reflection' },
     { path: 'map/spiral', emoji: '🌀', key: 'spiral' },
     { path: 'map/feminine', emoji: '🌺', key: 'feminine' },
-    { path: 'map/other', emoji: '👽', key: 'other' }
+    { path: 'map/other', emoji: '👽', key: 'other' },
+    { path: 'map/beyondReligion', emoji: '🕊️', key: 'beyondReligion' },
+    { path: 'map/timelessness', emoji: '🕰️', key: 'timelessness' }
   ];
 
   const mainNavItems = [

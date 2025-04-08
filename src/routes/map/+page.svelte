@@ -20,8 +20,9 @@
     { icon: '🪞', key: 'reflection' },
     { icon: '🌀', key: 'spiral' },
     { icon: '🌺', key: 'feminine'},
-    { icon: '👽', key: 'other'}
-
+    { icon: '👽', key: 'other'},
+    { icon: '🕊️', key: 'beyondReligion'},
+    { icon: '🕰️', key: 'timelessness'}
   ];
   
   // Function to generate URLs with language parameters
@@ -56,7 +57,7 @@
       <a
         href={getDomainUrl(key)}
         class="absolute transition transform hover:scale-105 cursor-pointer"
-        style={`top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(${i * (360 / domains.length)}deg) translate(16rem) rotate(-${i * (360 / domains.length)}deg);`}
+        style={`top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(${i * (360 / domains.length)}deg) translate(18rem) rotate(-${i * (360 / domains.length)}deg);`}
       >
         <MysticCard title={t[key]}>
           <div class="text-2xl">{icon}</div>

@@ -21,6 +21,8 @@
     'spiral',
     'feminine',
     'other',
+    'beyondReligion',
+    'timelessness'
   ];
 
   $: current = $page.url.pathname.split('/').pop();

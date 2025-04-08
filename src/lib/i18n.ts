@@ -14,6 +14,8 @@ import map_reflection_en from '$i18n/en/map_reflection.json';
 import map_spiral_en from '$i18n/en/map_spiral.json';
 import map_feminine_en from '$i18n/en/map_feminine.json';
 import map_other_en from '$i18n/en/map_other.json';
+import map_beyond_religion_en from '$i18n/en/map_beyond_religion.json';
+import map_timelessness_en from '$i18n/en/map_timelessness.json';
 import articles_en from '$i18n/en/articles.json';
 
 import common_sv from '$i18n/sv/common.json';
@@ -32,6 +34,8 @@ import map_reflection_sv from '$i18n/sv/map_reflection.json';
 import map_spiral_sv from '$i18n/sv/map_spiral.json';
 import map_feminine_sv from '$i18n/sv/map_feminine.json';
 import map_other_sv from '$i18n/sv/map_other.json';
+import map_beyond_religion_sv from '$i18n/sv/map_beyond_religion.json';
+import map_timelessness_sv from '$i18n/sv/map_timelessness.json';
 import articles_sv from '$i18n/sv/articles.json';
 
 const translations = {
@@ -52,6 +56,8 @@ const translations = {
     map_spiral: map_spiral_en,
     map_feminine: map_feminine_en,
     map_other: map_other_en,
+    map_beyond_religion: map_beyond_religion_en,
+    map_timelessness: map_timelessness_en,
     articles: articles_en,
   },
   sv: {
@@ -71,6 +77,8 @@ const translations = {
     map_spiral: map_spiral_sv,
     map_feminine: map_feminine_sv,
     map_other: map_other_sv,
+    map_beyond_religion: map_beyond_religion_sv,
+    map_timelessness: map_timelessness_sv,
     articles: articles_sv,
   }
 };
