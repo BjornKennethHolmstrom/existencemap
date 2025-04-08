@@ -2,26 +2,27 @@
 import { browser } from '$app/environment';
 import { goto } from '$app/navigation';
 
+/** @type {import('./$types').LayoutLoad} */
 export function load({ url }) {
   if (browser) {
-    console.log('Layout.js load function executing');
-    console.log('Current URL:', url.pathname + url.search);
+    console.log('Layout.js executing, current path:', url.pathname);
     
-    // Check if we need to redirect from a saved path (from 404.html)
+    // Handle GitHub Pages SPA routing
     const redirectPath = sessionStorage.getItem('existencemap:redirect');
-    console.log('Stored redirect path:', redirectPath);
     
-    if (redirectPath) {
-      // Clear the stored path immediately to prevent loops
+    if (redirectPath && redirectPath !== '/') {
+      console.log('Found stored path:', redirectPath);
+      
+      // Clear stored path immediately
       sessionStorage.removeItem('existencemap:redirect');
       
-      // Only redirect if we're on the home page and have a different path to go to
-      if (url.pathname === '/' && redirectPath !== '/') {
+      // Only redirect if we're actually on the home page
+      if (url.pathname === '/') {
         console.log('Redirecting to:', redirectPath);
         
-        // Use SvelteKit's goto for proper client-side navigation
-        // This will properly update both the URL and the rendered content
-        goto(redirectPath, { replaceState: true });
+        // Use the most direct approach - immediate redirect
+        window.location.replace(redirectPath);
+        return {}; // Stop execution since we're redirecting
       }
     }
   }

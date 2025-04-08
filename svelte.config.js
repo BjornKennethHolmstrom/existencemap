@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 
@@ -6,19 +7,17 @@ import mdsvexConfig from './mdsvex.config.js';
 const config = {
   extensions: ['.svelte', ...mdsvexConfig.extensions],
   
-  preprocess: [
-    mdsvex(mdsvexConfig)
-  ],
+  // Use both preprocessors
+  preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
   
   kit: {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: 'index.html', // SPA mode
-      precompress: false
+      fallback: 'index.html',
+      precompress: false,
+      strict: true
     }),
-    
-    // Ensure paths are properly configured
     paths: {
       base: ''
     }
