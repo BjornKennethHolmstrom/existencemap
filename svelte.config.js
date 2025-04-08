@@ -18,9 +18,6 @@ const config = {
       precompress: false
     }),
     
-    // Important for client-side routing
-    trailingSlash: 'never',
-    
     // Ensure paths are properly configured
     paths: {
       base: ''
