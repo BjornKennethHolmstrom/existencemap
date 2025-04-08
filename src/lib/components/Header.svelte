@@ -102,13 +102,12 @@
         on:mouseenter={() => mapOpen = true}
         on:mouseleave={() => mapOpen = false}
       >
-        <!-- Map Link -->
+        <!-- Map Link - Changed to navigate when clicked -->
         <a
           href={getNavUrl('map')}
           class="font-bold hover:text-violet-500 transition block px-2 py-2"
           aria-haspopup="true"
           aria-expanded={mapOpen}
-          on:click={(e) => { e.preventDefault(); mapOpen = !mapOpen; }}
         >
           🗺️ {t.map}
         </a>
@@ -199,17 +198,29 @@
       <!-- Mobile Nav Items -->
       {#each mainNavItems as { path, emoji, key, hasSubmenu }}
         {#if hasSubmenu}
-          <!-- Map with Submenu -->
+          <!-- Map with Submenu - Updated for better UX -->
           <div class="border-b border-indigo-100 dark:border-indigo-800 pb-2">
-            <button 
-              class="w-full text-left font-bold py-2 flex items-center justify-between"
-              on:click={() => mapOpen = !mapOpen}
-            >
-              <span>{emoji} {t[key]}</span>
-              <span class="transform transition-transform duration-200 {mapOpen ? 'rotate-180' : ''}">
-                ▼
-              </span>
-            </button>
+            <div class="flex justify-between items-center">
+              <!-- Map link - will navigate to map page -->
+              <a 
+                href={getNavUrl(path)} 
+                class="font-bold py-2 hover:text-violet-500 transition"
+                on:click={() => mobileMenuOpen = false}
+              >
+                {emoji} {t[key]}
+              </a>
+              
+              <!-- Separate toggle button for submenu -->
+              <button 
+                class="p-2 hover:bg-indigo-50 dark:hover:bg-indigo-800 rounded"
+                on:click={() => mapOpen = !mapOpen}
+                aria-label="Toggle submenu"
+              >
+                <span class="transform transition-transform duration-200 inline-block {mapOpen ? 'rotate-180' : ''}">
+                  ▼
+                </span>
+              </button>
+            </div>
             
             {#if mapOpen}
               <div class="pl-4 py-2 space-y-3 bg-indigo-50 dark:bg-indigo-900/30 rounded-lg mt-2">
