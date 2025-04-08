@@ -1,8 +1,9 @@
+<!-- src/lib/components/MysticSection.svelte -->
 <script lang="ts">
   export let className = '';
 </script>
 
-<section class={`relative overflow-hidden w-full py-16 px-4 flex flex-col items-center justify-center text-center ${className}
+<section class={`relative overflow-hidden w-full py-12 md:py-16 px-4 md:px-8 flex flex-col items-center justify-center text-center ${className}
   bg-gradient-to-br from-indigo-100 via-white to-purple-200
   dark:from-indigo-900 dark:via-black dark:to-purple-950
   transition-all`}>
@@ -14,6 +15,7 @@
     opacity-20 rounded-full blur-3xl animate-gradient-slow">
   </div>
 
-  <slot />
+  <div class="w-full max-w-6xl mx-auto">
+    <slot />
+  </div>
 </section>
-

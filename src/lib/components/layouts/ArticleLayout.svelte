@@ -40,11 +40,11 @@
   $: domainUrl = domain ? addLangParam(`${base}/map/${domain}`, $langStore) : '';
 </script>
 
-<MysticSection className="max-w-3xl mx-auto text-left text-gray-800 dark:text-gray-200 py-12">
-  <div class="w-full">
+<MysticSection className="max-w-3xl mx-auto text-left text-gray-800 dark:text-gray-200 py-6 md:py-12">
+  <div class="w-full px-4 md:px-0">
     <!-- Language fallback notice -->
     {#if isLanguageFallback}
-      <div class="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 p-4 rounded-lg mb-6 text-sm">
+      <div class="bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 p-3 md:p-4 rounded-lg mb-4 md:mb-6 text-xs md:text-sm">
         {requestedLanguage === 'sv' 
           ? 'Denna artikel är inte tillgänglig på svenska än. Visar engelska versionen istället.' 
           : 'This article is not yet available in your selected language. Showing English version instead.'}
@@ -52,27 +52,29 @@
     {/if}
   
     <!-- Breadcrumb navigation -->
-    <nav class="text-sm mb-8 text-indigo-500 dark:text-indigo-300">
+    <nav class="text-xs md:text-sm mb-4 md:mb-8 text-indigo-500 dark:text-indigo-300 flex flex-wrap">
       <a href={homeUrl} class="hover:underline">
         {$langStore === 'sv' ? 'Hem' : 'Home'}
-      </a> →
+      </a> 
+      <span class="mx-1">→</span>
       <a href={articlesUrl} class="hover:underline">{tCommon.articles}</a>
       {#if domain}
-        → <a href={domainUrl} class="hover:underline capitalize">{domainTranslated}</a>
+        <span class="mx-1">→</span>
+        <a href={domainUrl} class="hover:underline capitalize">{domainTranslated}</a>
       {/if}
     </nav>
     
     <!-- Article header -->
-    <header class="mb-12">
-      <h1 class="text-4xl md:text-5xl font-display font-bold mb-4 text-indigo-800 dark:text-indigo-300">
+    <header class="mb-6 md:mb-12">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-3 md:mb-4 text-indigo-800 dark:text-indigo-300 leading-tight">
         {title}
       </h1>
       
       {#if subtitle}
-        <p class="text-xl text-indigo-600 dark:text-indigo-400 italic mb-6">{subtitle}</p>
+        <p class="text-base md:text-xl text-indigo-600 dark:text-indigo-400 italic mb-4 md:mb-6">{subtitle}</p>
       {/if}
       
-      <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
+      <div class="flex items-center text-xs md:text-sm text-gray-600 dark:text-gray-400">
         {#if formattedDate}
           <time datetime={publishDate}>{formattedDate}</time>
           <span class="mx-2">•</span>
@@ -82,24 +84,24 @@
     </header>
     
     <!-- Article content -->
-    <article class="prose prose-lg dark:prose-invert prose-indigo max-w-none">
+    <article class="prose prose-sm sm:prose lg:prose-lg dark:prose-invert prose-indigo max-w-none">
       <slot />
     </article>
     
     <!-- Related domain nav if applicable -->
     {#if showDomainNav}
-      <div class="mt-16">
-        <hr class="border-t border-indigo-200 dark:border-indigo-700 my-12" />
-        <h2 class="text-xl font-display mb-4">{t.exploreDomains}</h2>
-        <a href={domainUrl} class="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition shadow-md hover:shadow-lg">
+      <div class="mt-8 md:mt-16">
+        <hr class="border-t border-indigo-200 dark:border-indigo-700 my-8 md:my-12" />
+        <h2 class="text-lg md:text-xl font-display mb-4">{t.exploreDomains}</h2>
+        <a href={domainUrl} class="inline-block px-4 md:px-6 py-2 md:py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition shadow-md hover:shadow-lg text-sm md:text-base">
           {t.visitDomain}: {domainTranslated}
         </a>
       </div>
     {/if}
     
     <!-- Back to articles -->
-    <div class="mt-16">
-      <a href={articlesUrl} class="text-indigo-500 dark:text-indigo-300 hover:underline flex items-center">
+    <div class="mt-8 md:mt-16">
+      <a href={articlesUrl} class="text-indigo-500 dark:text-indigo-300 hover:underline flex items-center text-sm md:text-base">
         ← {t.backToArticles}
       </a>
     </div>
