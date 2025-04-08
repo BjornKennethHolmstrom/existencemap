@@ -133,7 +133,7 @@
 
     <!-- Language Selector -->
     <select
-      class="bg-transparent border border-indigo-300 dark:border-indigo-600 rounded px-2 py-1 text-sm text-indigo-700 dark:text-indigo-100 hover:border-violet-500 transition"
+      class="bg-transparent border border-indigo-300 dark:border-indigo-600 rounded px-3 py-1 pr-7 text-sm text-indigo-700 dark:text-indigo-100 hover:border-violet-500 transition min-w-[8.5rem]"
       value={$langStore}
       on:change={handleLanguageChange}
     >
