@@ -71,7 +71,7 @@ export const articleData = {
       emoji: '🧠',
       date: '2024-04-02',
       author: 'Björn Kenneth Holmström',
-      available: false // Not translated yet
+      available: true // Now available in Swedish
     },
     {
       slug: 'dark-night',
@@ -82,7 +82,7 @@ export const articleData = {
       emoji: '🧘',
       date: '2024-04-03',
       author: 'Björn Kenneth Holmström',
-      available: false // Not translated yet
+      available: true // Now available in Swedish
     },
     {
       slug: 'vortex',
@@ -93,7 +93,7 @@ export const articleData = {
       emoji: '🌀',
       date: '2024-04-04',
       author: 'Björn Kenneth Holmström',
-      available: false // Not translated yet
+      available: true // Now available in Swedish
     }
   ]
 };

@@ -20,7 +20,7 @@ const config = {
     // Use different base paths for development vs production
     paths: {
       // Check if we're building for production (GitHub Pages)
-      base: process.env.NODE_ENV === 'production' ? '/existencemap' : ''
+      base: process.env.GITHUB_ACTIONS ? '' : ''
     }
   }
 };
