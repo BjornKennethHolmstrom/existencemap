@@ -36,13 +36,30 @@ jobs:
         run: NODE_ENV=production npm run build
 
       # Make sure the 404.html file is properly handled
-      - name: Copy 404.html to build
+      - name: Copy SPA files for GitHub Pages
         run: |
+          # Ensure 404.html exists and is setup for SPA routing
           if [ -f "static/404.html" ]; then
             cp static/404.html build/404.html
+            echo "Copied 404.html from static directory"
           else
-            echo "404.html not found in static directory, creating a default one"
             cp build/index.html build/404.html
+            echo "Created 404.html from index.html"
+          fi
+          
+          # Create a .nojekyll file to disable Jekyll processing
+          touch build/.nojekyll
+          
+          # Output build directory contents for debugging
+          echo "Build directory contents:"
+          ls -la build/
+      
+      # Create CNAME if needed
+      - name: Setup CNAME
+        run: |
+          if [ -f "static/CNAME" ]; then
+            cp static/CNAME build/CNAME
+            echo "Copied CNAME file"
           fi
 
       - name: Setup Pages

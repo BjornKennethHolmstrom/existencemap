@@ -1,21 +1,35 @@
 // src/routes/+layout.js
 import { browser } from '$app/environment';
+import { goto } from '$app/navigation';
 
-export function load() {
+export function load({ url }) {
   if (browser) {
+    console.log('Layout.js load function executing');
+    console.log('Current URL:', url.pathname + url.search);
+    
     // Check if we need to redirect from a saved path (from 404.html)
     const redirectPath = sessionStorage.getItem('existencemap:redirect');
+    console.log('Stored redirect path:', redirectPath);
+    
     if (redirectPath) {
-      // Remove the stored path to prevent loops
+      // Clear the stored path immediately to prevent loops
       sessionStorage.removeItem('existencemap:redirect');
       
-      // Navigate to the saved path if it's not the homepage
-      if (redirectPath !== '/') {
-        window.history.replaceState({}, '', redirectPath);
+      // Only redirect if we're on the home page and have a different path to go to
+      if (url.pathname === '/' && redirectPath !== '/') {
+        console.log('Redirecting to:', redirectPath);
+        
+        // Use a timeout to ensure this happens after the component is mounted
+        setTimeout(() => {
+          // Use history API for a clean redirect without page reload
+          window.history.replaceState({}, '', redirectPath);
+          
+          // Force SvelteKit to recognize the new URL
+          window.dispatchEvent(new PopStateEvent('popstate'));
+        }, 0);
       }
     }
   }
   
-  // Your existing load function contents, if any
   return {};
 }

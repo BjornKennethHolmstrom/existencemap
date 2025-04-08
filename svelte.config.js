@@ -14,10 +14,14 @@ const config = {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: 'index.html',
+      fallback: 'index.html', // SPA mode
       precompress: false
     }),
-    // Use different base paths for development vs production
+    
+    // Important for client-side routing
+    trailingSlash: 'never',
+    
+    // Ensure paths are properly configured
     paths: {
       base: ''
     }
