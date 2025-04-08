@@ -1,3 +1,4 @@
+<!-- src/lib/components/MysticParticles.svelte -->
 <script lang="ts">
   import { onMount } from 'svelte';
 
@@ -15,8 +16,8 @@
   ];
 
   class Particle {
-    x = Math.random() * innerWidth;
-    y = Math.random() * innerHeight;
+    x = Math.random() * window.innerWidth;
+    y = Math.random() * window.innerHeight;
     vx = (Math.random() - 0.5) * 0.3;
     vy = (Math.random() - 0.5) * 0.3;
     radius = Math.random() * 2 + 2;
@@ -24,6 +25,8 @@
     pulseOffset = Math.random() * 1000;
 
     draw(time: number) {
+      if (!ctx) return; // Added safety check
+
       const pulse = Math.sin((time + this.pulseOffset) / 500) * 0.4 + 0.6;
 
       ctx.beginPath();
@@ -41,8 +44,11 @@
     update(time: number) {
       this.x += this.vx;
       this.y += this.vy;
-      if (this.x < 0 || this.x > innerWidth) this.vx *= -1;
-      if (this.y < 0 || this.y > innerHeight) this.vy *= -1;
+      
+      // Use window.innerWidth/Height instead of getting from parameters
+      if (this.x < 0 || this.x > window.innerWidth) this.vx *= -1;
+      if (this.y < 0 || this.y > window.innerHeight) this.vy *= -1;
+      
       this.draw(time);
     }
   }
@@ -55,24 +61,37 @@
     }
   }
 
-  function animate() {
-    ctx.clearRect(0, 0, innerWidth, innerHeight);
-    particles.forEach((p) => p.update());
+  function animate(time = 0) {
+    if (!ctx) return; // Safety check
+
+    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    particles.forEach((p) => p.update(time));
     requestAnimationFrame(animate);
   }
 
   onMount(() => {
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
+    if (typeof window === 'undefined') return; // SSR check
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     ctx = canvas.getContext('2d');
+    
+    if (!ctx) return; // Safety check
+    
     initParticles();
     animate();
 
-    window.addEventListener('resize', () => {
-      canvas.width = innerWidth;
-      canvas.height = innerHeight;
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
       initParticles();
-    });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   });
 </script>
 

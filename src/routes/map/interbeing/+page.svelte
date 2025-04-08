@@ -3,9 +3,12 @@
   import MysticParticles from '$lib/components/MysticParticles.svelte';
   import MysticCard from '$lib/components/MysticCard.svelte';
   import DomainNav from '$lib/components/DomainNav.svelte';
+  import RelatedArticles from '$lib/components/RelatedArticles.svelte';
+  import { base } from '$app/paths';
   import { langStore } from '$lib/stores/langStore';
   import { getTranslation } from '$lib/i18n';
 
+  // Get translations
   $: t = getTranslation($langStore, 'map_interbeing');
 </script>
 
@@ -58,6 +61,8 @@
       <p class="text-sm">{t.promptText}</p>
     </MysticCard>
   </div>
+
+  <RelatedArticles domain="interbeing" />
 
   <DomainNav />
 </MysticSection>

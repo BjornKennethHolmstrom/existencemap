@@ -1,7 +1,15 @@
 import adapter from '@sveltejs/adapter-static';
+import { mdsvex } from 'mdsvex';
+import mdsvexConfig from './mdsvex.config.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+  extensions: ['.svelte', ...mdsvexConfig.extensions],
+  
+  preprocess: [
+    mdsvex(mdsvexConfig)
+  ],
+  
   kit: {
     adapter: adapter({
       pages: 'build',
@@ -12,7 +20,6 @@ const config = {
     // Use different base paths for development vs production
     paths: {
       // Check if we're building for production (GitHub Pages)
-      // When running locally with npm run dev, this will be undefined
       base: process.env.NODE_ENV === 'production' ? '/existencemap' : ''
     }
   }

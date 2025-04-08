@@ -12,6 +12,7 @@ import map_unknown_en from '$i18n/en/map_unknown.json';
 import map_cosmos_en from '$i18n/en/map_cosmos.json';
 import map_reflection_en from '$i18n/en/map_reflection.json';
 import map_spiral_en from '$i18n/en/map_spiral.json';
+import articles_en from '$i18n/en/articles.json';
 
 import common_sv from '$i18n/sv/common.json';
 import home_sv from '$i18n/sv/home.json';
@@ -27,6 +28,7 @@ import map_unknown_sv from '$i18n/sv/map_unknown.json';
 import map_cosmos_sv from '$i18n/sv/map_cosmos.json';
 import map_reflection_sv from '$i18n/sv/map_reflection.json';
 import map_spiral_sv from '$i18n/sv/map_spiral.json';
+import articles_sv from '$i18n/sv/articles.json';
 
 const translations = {
   en: {
@@ -44,6 +46,7 @@ const translations = {
     map_cosmos: map_cosmos_en,
     map_reflection: map_reflection_en,
     map_spiral: map_spiral_en,
+    articles: articles_en,
   },
   sv: {
     common: common_sv,
@@ -60,6 +63,7 @@ const translations = {
     map_cosmos: map_cosmos_sv,
     map_reflection: map_reflection_sv,
     map_spiral: map_spiral_sv,
+    articles: articles_sv,
   }
 };
 

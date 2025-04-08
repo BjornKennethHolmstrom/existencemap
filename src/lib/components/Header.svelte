@@ -5,6 +5,7 @@
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
   import { base } from '$app/paths'; // Import base path
+  import { page } from '$app/stores'; // Import page store
 
   $: t = getTranslation($langStore, 'common');
 
@@ -47,6 +48,21 @@
     { href: `${base}/map/reflection`, emoji: '🪞', key: 'reflection' },
     { href: `${base}/map/spiral`, emoji: '🌀', key: 'spiral' }
   ];
+  
+  // NEW: Handle language change with URL parameter update
+  function handleLanguageChange(event) {
+    const newLang = event.target.value;
+    langStore.set(newLang);
+    
+    // Update URL with the language parameter
+    if (browser) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', newLang);
+      
+      // Use history.pushState to avoid full page reload
+      history.pushState({}, '', url.toString());
+    }
+  }
 </script>
 
 <header class="w-full py-4 px-6 flex items-center justify-between text-sm font-semibold tracking-wide text-indigo-900 dark:text-indigo-100 z-10">
@@ -88,15 +104,18 @@
         </div>
       </div>
 
+      <!-- New Articles Link -->
+      <a href="{base}/articles" class="font-bold hover:text-violet-500 transition">📝 {t.articles || 'Articles'}</a>
 
       <a href="{base}/about" class="font-bold hover:text-violet-500 transition">📖 {t.about}</a>
       <a href="{base}/credits" class="font-bold hover:text-violet-500 transition">🌟 {t.credits}</a>
     </nav>
 
-    <!-- Language Selector -->
+    <!-- Language Selector - Updated to maintain URL parameters -->
     <select
       class="bg-transparent border border-indigo-300 dark:border-indigo-600 rounded px-2 py-1 text-sm text-indigo-700 dark:text-indigo-100 hover:border-violet-500 transition"
-      bind:value={$langStore}
+      value={$langStore}
+      on:change={handleLanguageChange}
     >
       <option value="en">🇬🇧 English</option>
       <option value="sv">🇸🇪 Svenska</option>

@@ -1,12 +1,15 @@
 <script lang="ts">
   import DomainNav from '$lib/components/DomainNav.svelte';
+  import RelatedArticles from '$lib/components/RelatedArticles.svelte';
   import MysticSection from '$lib/components/MysticSection.svelte';
   import MysticParticles from '$lib/components/MysticParticles.svelte';
   import MysticCard from '$lib/components/MysticCard.svelte';
   import { langStore } from '$lib/stores/langStore';
   import { getTranslation } from '$lib/i18n';
+  import { base } from '$app/paths';
 
-  $: t = getTranslation($langStore, 'map_consciousness');
+  // Get translations
+  $: t = getTranslation($langStore, 'map_consciousness');  
 </script>
 
 <MysticSection className="text-indigo-900 dark:text-indigo-100 pt-12 pb-32">
@@ -50,6 +53,10 @@
       <p class="text-sm">{t.promptText}</p>
     </MysticCard>
   </div>
+
+  <!-- Related Articles Component -->
+  <RelatedArticles domain="consciousness" />
+
   <DomainNav />
 </MysticSection>
 
