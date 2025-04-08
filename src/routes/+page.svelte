@@ -15,7 +15,9 @@
 
 <MysticSection>
   <MysticAura />
-  <MysticLogo />
+  <div class="flex flex-col items-center justify-center text-center space-y-4">
+    <MysticLogo />
+  </div>
 
   <!-- Hero Heading -->
   <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white font-display mb-4">
