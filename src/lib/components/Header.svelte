@@ -73,7 +73,9 @@
     { path: 'map/cosmos', emoji: '🔭', key: 'cosmos' },
     { path: 'map/unknown', emoji: '♾️', key: 'unknown' },
     { path: 'map/reflection', emoji: '🪞', key: 'reflection' },
-    { path: 'map/spiral', emoji: '🌀', key: 'spiral' }
+    { path: 'map/spiral', emoji: '🌀', key: 'spiral' },
+    { path: 'map/feminine', emoji: '🌺', key: 'feminine' },
+    { path: 'map/other', emoji: '👽', key: 'other' }
   ];
 
   const mainNavItems = [

@@ -18,7 +18,9 @@
     'unknown',
     'cosmos',
     'reflection',
-    'spiral'
+    'spiral',
+    'feminine',
+    'other',
   ];
 
   $: current = $page.url.pathname.split('/').pop();

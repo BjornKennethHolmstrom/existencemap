@@ -18,7 +18,10 @@
     { icon: '🧘', key: 'mysticalStates' },
     { icon: '🔭', key: 'cosmos' },
     { icon: '🪞', key: 'reflection' },
-    { icon: '🌀', key: 'spiral' }
+    { icon: '🌀', key: 'spiral' },
+    { icon: '🌺', key: 'feminine'},
+    { icon: '👽', key: 'other'}
+
   ];
   
   // Function to generate URLs with language parameters
