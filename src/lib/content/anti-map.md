@@ -3,7 +3,7 @@ title: The Anti-Map
 subtitle: Embracing the Unmappable
 domain: unknown
 publishDate: 2024-04-09
-author: Björn Kenneth Holmström
+author: Claude 3.7 Sonnet
 ---
 
 ### Beyond Cartography
