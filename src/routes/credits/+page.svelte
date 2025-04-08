@@ -17,6 +17,7 @@
     <li><strong>{t.bjorn}:</strong> {t.bjornDesc}</li>
     <li><strong>{t.chatgpt}:</strong> {t.chatgptDesc}</li>
     <li><strong>{t.claude}:</strong> {t.claudeDesc}</li>
+    <li><strong>{t.deepseek}:</strong> {t.deepseekDesc}</li>
     <li><strong>{t.svelte}:</strong> {t.svelteDesc}</li>
     <li><strong>{t.tailwind}:</strong> {t.tailwindDesc}</li>
     <li><strong>{t.mystics}:</strong> {t.mysticsDesc}</li>

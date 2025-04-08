@@ -49,7 +49,7 @@ Optional motifs:
 ## 🧙 Creator
 
 Björn Kenneth Holmström  
-With mystical assistance from ChatGPT & Claude
+With mystical assistance from ChatGPT, Claude and DeepSeek
 
 ---
 
