@@ -1,9 +1,11 @@
+<!-- src/routes/map/+page.svelte -->
 <script lang="ts">
   import MysticSection from '$lib/components/MysticSection.svelte';
   import MysticParticles from '$lib/components/MysticParticles.svelte';
   import MysticCard from '$lib/components/MysticCard.svelte';
   import { langStore } from '$lib/stores/langStore';
   import { getTranslation } from '$lib/i18n';
+  import { base } from '$app/paths'; // Import base path
 
   $: t = getTranslation($langStore, 'map');
 
@@ -30,7 +32,7 @@
   <div class="relative w-[32rem] h-[32rem] sm:w-[40rem] sm:h-[40rem] md:w-[48rem] md:h-[42rem]">
     {#each domains as { icon, key }, i}
       <a
-        href={`/map/${key}`}
+        href="{base}/map/{key}"
         class="absolute transition transform hover:scale-105 cursor-pointer"
         style={`top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(${i * (360 / domains.length)}deg) translate(16rem) rotate(-${i * (360 / domains.length)}deg);`}
       >
@@ -41,4 +43,3 @@
     {/each}
   </div>
 </MysticSection>
-

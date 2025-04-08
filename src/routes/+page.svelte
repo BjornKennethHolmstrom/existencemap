@@ -1,3 +1,4 @@
+<!-- src/routes/+page.svelte -->
 <script lang="ts">
   import MysticSection from '$lib/components/MysticSection.svelte';
   import MysticAura from '$lib/components/MysticAura.svelte';
@@ -5,6 +6,7 @@
   import MysticCard from '$lib/components/MysticCard.svelte';
   import { langStore } from '$lib/stores/langStore';
   import { getTranslation } from '$lib/i18n';
+  import { base } from '$app/paths'; // Import base path
 
   $: t = getTranslation($langStore, 'home');
 
@@ -27,7 +29,7 @@
 
   <!-- Call to Action -->
   <a
-    href="/map"
+    href="{base}/map"
     class="inline-block px-8 py-4 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-base
       shadow-lg hover:shadow-xl transition-all animate-pulse-soft"
   >
@@ -49,4 +51,3 @@
     </MysticCard>
   </div>
 </MysticSection>
-

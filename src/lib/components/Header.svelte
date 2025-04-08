@@ -1,8 +1,10 @@
+<!-- src/lib/components/Header.svelte -->
 <script lang="ts">
   import { langStore } from '$lib/stores/langStore';
   import { getTranslation } from '$lib/i18n';
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
+  import { base } from '$app/paths'; // Import base path
 
   $: t = getTranslation($langStore, 'common');
 
@@ -36,19 +38,19 @@
   }
 
   const mapItems = [
-    { href: '/map/consciousness', emoji: '🧠', key: 'consciousness' },
-    { href: '/map/development', emoji: '🌱', key: 'development' },
-    { href: '/map/mysticalStates', emoji: '🧘', key: 'mysticalStates' },
-    { href: '/map/interbeing', emoji: '💫', key: 'interbeing' },
-    { href: '/map/cosmos', emoji: '🔭', key: 'cosmos' },
-    { href: '/map/unknown', emoji: '♾️', key: 'unknown' },
-    { href: '/map/reflection', emoji: '🪞', key: 'reflection' },
-    { href: '/map/spiral', emoji: '🌀', key: 'spiral' }
+    { href: `${base}/map/consciousness`, emoji: '🧠', key: 'consciousness' },
+    { href: `${base}/map/development`, emoji: '🌱', key: 'development' },
+    { href: `${base}/map/mysticalStates`, emoji: '🧘', key: 'mysticalStates' },
+    { href: `${base}/map/interbeing`, emoji: '💫', key: 'interbeing' },
+    { href: `${base}/map/cosmos`, emoji: '🔭', key: 'cosmos' },
+    { href: `${base}/map/unknown`, emoji: '♾️', key: 'unknown' },
+    { href: `${base}/map/reflection`, emoji: '🪞', key: 'reflection' },
+    { href: `${base}/map/spiral`, emoji: '🌀', key: 'spiral' }
   ];
 </script>
 
 <header class="w-full py-4 px-6 flex items-center justify-between text-sm font-semibold tracking-wide text-indigo-900 dark:text-indigo-100 z-10">
-  <a href="/" class="text-lg font-bold hover:text-violet-600 transition">🌌 Existencemap</a>
+  <a href="{base}/" class="text-lg font-bold hover:text-violet-600 transition">🌌 Existencemap</a>
 
   <div class="flex items-center space-x-6">
     <nav class="flex items-center space-x-6">
@@ -59,7 +61,7 @@
       >
         <!-- CLICKABLE TOP LINK -->
         <a
-          href="/map"
+          href="{base}/map"
           class="font-bold hover:text-violet-500 transition block px-2 py-2"
           aria-haspopup="true"
           aria-expanded={mapOpen}
@@ -87,8 +89,8 @@
       </div>
 
 
-      <a href="/about" class="font-bold hover:text-violet-500 transition">📖 {t.about}</a>
-      <a href="/credits" class="font-bold hover:text-violet-500 transition">🌟 {t.credits}</a>
+      <a href="{base}/about" class="font-bold hover:text-violet-500 transition">📖 {t.about}</a>
+      <a href="{base}/credits" class="font-bold hover:text-violet-500 transition">🌟 {t.credits}</a>
     </nav>
 
     <!-- Language Selector -->
@@ -110,4 +112,3 @@
     </button>
   </div>
 </header>
-
