@@ -15,9 +15,7 @@
 
 <MysticSection>
   <MysticAura />
-  <div class="flex flex-col items-center justify-center text-center space-y-4">
-    <MysticLogo />
-  </div>
+  <MysticLogo />
 
   <!-- Hero Heading -->
   <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white font-display mb-4">
@@ -28,6 +26,8 @@
   <p class="max-w-2xl text-lg md:text-xl text-gray-700 dark:text-gray-300 font-body mb-10">
     {t.heroSubtitle}
   </p>
+
+  <br>
 
   <!-- Call to Action -->
   <a
