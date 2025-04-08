@@ -5,13 +5,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -33,10 +31,13 @@ jobs:
         run: npm install
 
       - name: Build
-        run: NODE_ENV=production npm run build
+        run: |
+          # Configure the app to use hash-based routing in production
+          echo "Building with hash-based routing"
+          NODE_ENV=production npm run build
 
       # Make sure the 404.html file is properly handled
-      - name: Copy SPA files for GitHub Pages
+      - name: Setup SPA files for GitHub Pages
         run: |
           # Ensure 404.html exists and is setup for SPA routing
           if [ -f "static/404.html" ]; then
@@ -50,17 +51,14 @@ jobs:
           # Create a .nojekyll file to disable Jekyll processing
           touch build/.nojekyll
           
+          # Ensure CNAME is copied if it exists
+          if [ -f "static/CNAME" ]; then
+            cp static/CNAME build/CNAME
+          fi
+          
           # Output build directory contents for debugging
           echo "Build directory contents:"
           ls -la build/
-      
-      # Create CNAME if needed
-      - name: Setup CNAME
-        run: |
-          if [ -f "static/CNAME" ]; then
-            cp static/CNAME build/CNAME
-            echo "Copied CNAME file"
-          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

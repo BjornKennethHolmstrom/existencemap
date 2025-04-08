@@ -5,31 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        // Debug info
-        console.log('404.html script executing');
+        // Get the current path
+        var path = window.location.pathname;
         
-        // Get the current path including any query parameters
-        const pathname = window.location.pathname;
-        const search = window.location.search;
-        const fullPath = pathname + search;
-        
-        console.log('Current path:', fullPath);
-        
-        // Don't redirect the home page itself
-        if (pathname === '/' || pathname === '/index.html' || pathname === '/404.html') {
-            console.log('On main page, no redirect needed');
-            window.location.href = '/';
-        } else {
-            // Store the path in sessionStorage
-            console.log('Storing path for redirect:', fullPath);
-            sessionStorage.setItem('existencemap:redirect', fullPath);
-            
-            // Redirect to the base URL
-            window.location.href = '/';
+        // Remove any leading slash and convert to hash route
+        if (path.startsWith('/')) {
+            path = path.substring(1);
         }
+        
+        // Redirect to the hash-based route
+        window.location.href = '/#/' + path + window.location.search;
     </script>
 </head>
 <body>
-    <p>Redirecting...</p>
+    <p>Redirecting to hash-based route...</p>
 </body>
 </html>

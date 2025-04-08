@@ -5,8 +5,8 @@
   import { page } from '$app/stores';
   import { langStore } from '$lib/stores/langStore';
   import { getTranslation } from '$lib/i18n';
-  import { addLangParam } from '$lib/utils/langUrl';
   import { getArticle } from '$lib/data/articles';
+  import { getRoute, addLangToRoute } from '$lib/utils/hashRoutes';
   
   // Get translations
   $: t = getTranslation($langStore, 'articles');
@@ -48,10 +48,10 @@
   // Get translated domain name if available
   $: domainTranslated = articleDomain ? (tCommon[articleDomain] || articleDomain) : '';
   
-  // Generate URLs with language parameter
-  $: homeUrl = addLangParam(`${base}/`, $langStore);
-  $: articlesUrl = addLangParam(`${base}/articles`, $langStore);
-  $: domainUrl = articleDomain ? addLangParam(`${base}/map/${articleDomain}`, $langStore) : '';
+  // Generate URLs with language parameter using hash-based routing
+  $: homeUrl = addLangToRoute(getRoute(''), $langStore);
+  $: articlesUrl = addLangToRoute(getRoute('articles'), $langStore);
+  $: domainUrl = articleDomain ? addLangToRoute(getRoute(`map/${articleDomain}`), $langStore) : '';
 </script>
 
 <MysticSection className="max-w-3xl mx-auto">

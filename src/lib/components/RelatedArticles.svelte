@@ -4,7 +4,7 @@
   import { langStore } from '$lib/stores/langStore';
   import { getTranslation } from '$lib/i18n';
   import { getArticlesByDomain } from '$lib/data/articles';
-  import { addLangParam } from '$lib/utils/langUrl';
+  import { getRoute, addLangToRoute } from '$lib/utils/hashRoutes';
   
   // Props - make sure domain is required and properly typed
   /** @type {string} */
@@ -23,7 +23,7 @@
   $: console.log(`Found ${relatedArticles.length} articles for domain "${domain}"`);
   
   // Generate article URLs with language parameter
-  $: getArticleUrl = (slug) => addLangParam(`${base}/articles/${slug}`, $langStore);
+  $: getArticleUrl = (slug) => addLangToRoute(getRoute(`articles/${slug}`), $langStore);
 </script>
 
 {#if domain && relatedArticles.length > 0}
