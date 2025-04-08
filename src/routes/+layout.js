@@ -19,14 +19,9 @@ export function load({ url }) {
       if (url.pathname === '/' && redirectPath !== '/') {
         console.log('Redirecting to:', redirectPath);
         
-        // Use a timeout to ensure this happens after the component is mounted
-        setTimeout(() => {
-          // Use history API for a clean redirect without page reload
-          window.history.replaceState({}, '', redirectPath);
-          
-          // Force SvelteKit to recognize the new URL
-          window.dispatchEvent(new PopStateEvent('popstate'));
-        }, 0);
+        // Use SvelteKit's goto for proper client-side navigation
+        // This will properly update both the URL and the rendered content
+        goto(redirectPath, { replaceState: true });
       }
     }
   }
