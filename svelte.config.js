@@ -21,14 +21,6 @@ const config = {
     paths: {
       base: ''
     },
-    alias: {
-      $i18n: 'src/lib/i18n'
-    },
-    // Add hash-based routing
-    paths: {
-      base: '',
-      relative: false
-    },
     prerender: {
       entries: []
     }
