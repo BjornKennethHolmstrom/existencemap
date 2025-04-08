@@ -14,7 +14,7 @@ const config = {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: 'index.html', // Enable SPA mode
+      fallback: '404.html',
       precompress: false
     }),
     // Use different base paths for development vs production

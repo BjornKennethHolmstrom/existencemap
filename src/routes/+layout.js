@@ -1,5 +1,4 @@
 // src/routes/+layout.js
-
 import { browser } from '$app/environment';
 
 export function load() {
@@ -10,10 +9,8 @@ export function load() {
       // Remove the stored path
       sessionStorage.removeItem('existencemap:redirect');
       
-      // Navigate to the saved path if it's not the homepage
-      if (redirectPath !== '/') {
-        window.history.replaceState({}, '', redirectPath);
-      }
+      // Navigate to the saved path
+      window.history.replaceState({}, '', redirectPath);
     }
   }
   
