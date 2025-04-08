@@ -1,114 +1,28 @@
-// static/404.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Existence Map</title>
+    <title>Redirecting...</title>
     <script>
-        // This approach preserves the URL in the address bar
-        // while handling GitHub Pages 404 issues
-
-        // Get the current path
-        const pathname = window.location.pathname;
+        // Get the current path including any query parameters
+        const path = window.location.pathname + window.location.search;
         
-        // Create a base element to handle relative paths correctly
-        const base = document.createElement('base');
-        base.href = '/';
-        document.head.appendChild(base);
+        // Extract the path without the base part (which is empty for custom domains)
+        // For GitHub Pages project site, this might be '/existencemap'
+        const basePath = ''; // Leave empty for custom domain
         
-        // Load the app's main script which will handle routing
-        // This immediately loads the SvelteKit app without redirecting
-        window.onload = function() {
-            // Dynamically create script elements for your app
-            // This will load the SvelteKit app which handles routing internally
-            fetch('/index.html')
-                .then(response => response.text())
-                .then(html => {
-                    // Extract script tags from the index.html
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-                    const scripts = doc.querySelectorAll('script[src]');
-                    
-                    // Inject these scripts into the current document
-                    scripts.forEach(script => {
-                        const newScript = document.createElement('script');
-                        newScript.src = script.src;
-                        newScript.type = script.type || 'text/javascript';
-                        document.body.appendChild(newScript);
-                    });
-                    
-                    // Also extract and inject any styles
-                    const styles = doc.querySelectorAll('link[rel="stylesheet"]');
-                    styles.forEach(style => {
-                        const newStyle = document.createElement('link');
-                        newStyle.rel = 'stylesheet';
-                        newStyle.href = style.href;
-                        document.head.appendChild(newStyle);
-                    });
-                    
-                    // Extract and set title
-                    if (doc.title) {
-                        document.title = doc.title;
-                    }
-                })
-                .catch(err => {
-                    console.error('Failed to load app:', err);
-                    // Fallback to redirect if loading fails
-                    window.location.href = '/?path=' + encodeURIComponent(pathname);
-                });
-        };
+        let redirectPath = path.replace(basePath, '');
+        
+        // Create storage key for the pathname
+        sessionStorage.setItem('existencemap:redirect', redirectPath);
+        
+        // Redirect to the base URL
+        window.location.href = basePath + '/';
     </script>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-            background: linear-gradient(to bottom right, #4f46e5, #7e22ce);
-            color: white;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        
-        .loading {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: white;
-            animation: spin 1s ease-in-out infinite;
-            margin-bottom: 20px;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        .app-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        
-        .loading-text {
-            font-size: 16px;
-            opacity: 0.8;
-        }
-    </style>
 </head>
 <body>
-    <div class="loading">
-        <div class="spinner"></div>
-        <div class="app-title">Existence Map</div>
-        <div class="loading-text">Loading your experience...</div>
-    </div>
+    <p>Redirecting...</p>
 </body>
 </html>
+
