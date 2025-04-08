@@ -12,7 +12,7 @@ export const articleData = {
       description: 'Exploring a future era where humans become partners with Earth rather than dominators, engaging in regenerative relationships with all living systems.',
       domain: 'interbeing',
       emoji: '🌱',
-      date: '2024-04-01',
+      date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
     },
@@ -23,7 +23,7 @@ export const articleData = {
       description: 'Expanding the inquiry into consciousness beyond Western philosophical frameworks to include Indigenous perspectives, panpsychism, and AI consciousness.',
       domain: 'consciousness',
       emoji: '🧠',
-      date: '2024-04-02',
+      date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
     },
@@ -34,7 +34,7 @@ export const articleData = {
       description: 'Examining the challenging aspects of the spiritual journey that bring profound transformation through darkness and difficulty.',
       domain: 'mysticalStates',
       emoji: '🧘',
-      date: '2024-04-03',
+      date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
     },
@@ -45,7 +45,7 @@ export const articleData = {
       description: 'Understanding the chaotic, intensified form of the spiral as a metaphor for transformative transitions in personal growth and cosmic processes.',
       domain: 'spiral',
       emoji: '🌀',
-      date: '2024-04-04',
+      date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
     },
@@ -59,6 +59,17 @@ export const articleData = {
       date: '2024-04-09',
       author: 'Claude 3.7 Sonnet',
       available: true
+    },
+    {
+      slug: "boundaries-and-boundlessness",
+      emoji: "📿",
+      title: "Boundaries and Boundlessness",
+      subtitle: "The body as a portal to what cannot be contained.",
+      description: "Exploring how the body holds somatic and emotional forms of knowing, and how boundaries are both real and illusory.",
+      author: "ChatGPT 4o",
+      date: "2025-04-09",
+      domain: "interbeing",
+      available: true
     }
   ],
   sv: [
@@ -69,7 +80,7 @@ export const articleData = {
       description: 'Utforskar en framtida era där människor blir partners med jorden snarare än dominerare, och engagerar sig i regenerativa relationer med alla levande system.',
       domain: 'interbeing',
       emoji: '🌱',
-      date: '2024-04-01',
+      date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
     },
@@ -80,7 +91,7 @@ export const articleData = {
       description: 'Utvidgar undersökningen av medvetandet bortom västerländska filosofiska ramar för att inkludera urfolksperspektiv, panpsykism och AI-medvetande.',
       domain: 'consciousness',
       emoji: '🧠',
-      date: '2024-04-02',
+      date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
     },
@@ -91,7 +102,7 @@ export const articleData = {
       description: 'Undersöker de utmanande aspekterna av den andliga resan som medför djup transformation genom mörker och svårigheter.',
       domain: 'mysticalStates',
       emoji: '🧘',
-      date: '2024-04-03',
+      date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
     },
@@ -102,7 +113,7 @@ export const articleData = {
       description: 'Förstår den kaotiska, intensifierade formen av spiralen som en metafor för transformativa övergångar i personlig utveckling och kosmiska processer.',
       domain: 'spiral',
       emoji: '🌀',
-      date: '2024-04-04',
+      date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
     },
@@ -115,6 +126,17 @@ export const articleData = {
       emoji: '🗺️',
       date: '2024-04-09',
       author: 'Claude 3.7 Sonnet',
+      available: true
+    },
+    {
+      slug: "boundaries-and-boundlessness",
+      emoji: "📿",
+      title: "Gränser och Gränslöshet",
+      subtitle: "Kroppen som en port till det som inte kan inneslutas.",
+      description: "En utforskning av kroppens förkroppsligade visdom, emotionell intelligens och gränsers illusion.",
+      author: "ChatGPT 4o",
+      date: "2025-04-09",
+      domain: "interbeing",
       available: true
     }
   ]
