@@ -15,6 +15,17 @@
   "chainText": "Some awakenings are so luminous, we want to hold onto them — repeat them. But clinging to a stage, even a spiritual one, becomes its own trap. The spiral invites us to move freely — not wear our growth as armor, but walk with openness.",
 
   "promptTitle": "Contemplation",
-  "promptText": "What if the next step is not up — but around? Not forward — but deeper?"
+  "promptText": "What if the next step is not up — but around? Not forward — but deeper?",
+
+  "stagnationTitle": "Cyclical Stagnation",
+  "stagnationText": "Not all spirals lead to growth. Sometimes we circle the same patterns without true evolution—mistaking motion for progress. These false spirals can trap us in comfortable repetition, creating an illusion of change while actually maintaining the status quo.",
+  "stagnationList": [
+    "The eternal beginner: Always starting new practices but never deepening them",
+    "Insight addiction: Collecting peak experiences without integrating their wisdom",
+    "Conceptual bypassing: Understanding growth intellectually while avoiding embodied change",
+    "The guru loop: Constantly seeking new teachers instead of applying existing lessons",
+    "Cyclical drama: Repeating emotional patterns with different faces and places"
+  ],
+  "stagnationText2": "Recognizing these patterns is itself a spiral turn. The way beyond stagnation isn't force or shame, but honest awareness and gentle redirection. Sometimes what appears as stuckness is actually a necessary integration period—the spiral tightening before its next expansion."
 }
 

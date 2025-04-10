@@ -22,6 +22,17 @@
   "integrationText": "Reflektion handlar inte om självkritik – utan om ärlighet med sig själv. Och ur den ärligheten föds möjligheten till integration: att leva mer helt, mer medvetet, mer i samklang med den vi innerst inne är.",
 
   "promptTitle": "Reflektion",
-  "promptText": "Vad i ditt liv ber om att få bli sett – inte dömt, inte fixat, bara milt sett?"
+  "promptText": "Vad i ditt liv ber om att få bli sett – inte dömt, inte fixat, bara milt sett?",
+
+  "deceptionTitle": "Självbedrägeriets spegel",
+  "deceptionText": "Vårt sinne är mästerligt på att skapa bekväma illusioner. Självbedrägeri är inte en brist utan en funktion — en skyddsmekanism som skärmar oss från sanningar vi ännu inte är redo att möta. Äkta reflektion kräver dock att vi möter dessa slöjor ärligt.",
+  "deceptionList": [
+    "Bekräftelsebias: Att bara söka bevis som stödjer det vi redan tror på",
+    "Andlig kringgående: Att använda andliga koncept för att undvika känslomässig smärta",
+    "Identitetsskydd: Att avvisa information som hotar vår självbild",
+    "Projektion: Att tillskriva andra det vi inte kan erkänna hos oss själva",
+    "Selektivt minne: Att minnas händelser på sätt som smickrar vår berättelse"
+  ],
+  "deceptionText2": "Paradoxen med reflektion är att vi använder samma sinne för att betrakta sig självt som en gång skapade dessa illusioner. Därför är meditation, tillitsfulla relationer och kreativt uttryck värdefulla — de skapar tillräckligt med distans för att vi ska kunna se våra mönster tydligare."
 }
 

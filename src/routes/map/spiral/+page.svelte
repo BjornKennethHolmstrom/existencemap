@@ -51,6 +51,18 @@
     <p>{t.humilityText}</p>
   </div>
 
+  <!-- Cyclical Stagnation -->
+  <div class="max-w-3xl mx-auto mb-16 space-y-4">
+    <h2 class="text-2xl font-semibold">{t.stagnationTitle}</h2>
+    <p>{t.stagnationText}</p>
+    <ul class="list-disc list-inside space-y-1 text-sm">
+      {#each t.stagnationList as item}
+        <li>{item}</li>
+      {/each}
+    </ul>
+    <p>{t.stagnationText2}</p>
+  </div>
+
   <!-- The Golden Chain -->
   <div class="max-w-3xl mx-auto mb-16 space-y-4">
     <h2 class="text-2xl font-semibold">{t.chainTitle}</h2>

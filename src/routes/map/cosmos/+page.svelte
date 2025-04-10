@@ -54,6 +54,46 @@
     <p>{@html t.infinityText}</p>
   </div>
 
+  <!-- Black Holes: Cosmic Thresholds -->
+  <div class="max-w-3xl mx-auto mb-16 space-y-4">
+    <h2 class="text-2xl font-semibold">{t.blackHolesTitle}</h2>
+    <p>{t.blackHolesText}</p>
+  </div>
+
+  <!-- The Physics of Transcendence -->
+  <div class="max-w-3xl mx-auto mb-16 space-y-4">
+    <h2 class="text-2xl font-semibold">{t.physicsTitle}</h2>
+    <p>{t.physicsText}</p>
+    <ul class="list-disc list-inside mt-4 space-y-2 text-sm">
+      {#each t.physicsList as item}
+        <li>{item}</li>
+      {/each}
+    </ul>
+  </div>
+
+  <!-- The Boundary of Knowing -->
+  <div class="max-w-3xl mx-auto mb-16 space-y-4">
+    <h2 class="text-2xl font-semibold">{t.boundaryTitle}</h2>
+    <p>{t.boundaryText}</p>
+  </div>
+
+  <!-- Cosmic Mirrors -->
+  <div class="max-w-3xl mx-auto mb-16 space-y-4">
+    <h2 class="text-2xl font-semibold">{t.mirrorsTitle}</h2>
+    <p>{t.mirrorsText}</p>
+    <ul class="list-disc list-inside mt-4 space-y-2 text-sm">
+      {#each t.mirrorsList as item}
+        <li>{item}</li>
+      {/each}
+    </ul>
+  </div>
+
+  <!-- White Holes and Cosmic Rebirth -->
+  <div class="max-w-3xl mx-auto mb-16 space-y-4">
+    <h2 class="text-2xl font-semibold">{t.whiteHolesTitle}</h2>
+    <p>{t.whiteHolesText}</p>
+  </div>
+
   <!-- Prompt -->
   <div class="max-w-3xl mx-auto mt-20">
     <MysticCard title={t.promptTitle} color="sky">

@@ -22,6 +22,17 @@
   "integrationText": "Reflection is not about self-critique — it is about self-honesty. And from that honesty comes the possibility of integration: living more fully, more consciously, more in alignment with who we truly are.",
 
   "promptTitle": "Contemplation",
-  "promptText": "What in your life is asking to be seen — not judged, not fixed, just gently seen?"
+  "promptText": "What in your life is asking to be seen — not judged, not fixed, just gently seen?",
+
+  "deceptionTitle": "The Mirror of Self-Deception",
+  "deceptionText": "Our minds are masterful at creating comfortable illusions. Self-deception isn't a flaw but a feature—a protective mechanism that shields us from truths we aren't ready to face. Yet genuine reflection requires encountering these veils honestly.",
+  "deceptionList": [
+    "Confirmation bias: Seeking only evidence that supports what we already believe",
+    "Spiritual bypassing: Using spiritual concepts to avoid emotional discomfort",
+    "Identity protection: Rejecting information that threatens our self-image",
+    "Projection: Attributing to others what we cannot acknowledge in ourselves",
+    "Selective memory: Remembering events in ways that flatter our narratives"
+  ],
+  "deceptionText2": "The paradox of reflection is that we use the same mind to observe itself that created these illusions. This is why meditation, trusted relationships, and creative expression are valuable—they create enough distance to see our patterns more clearly."
 }
 

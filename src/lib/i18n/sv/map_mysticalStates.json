@@ -23,6 +23,41 @@
   "stagesText": "Tillstånd kommer och går. Stadier består. Ett barn kan få en glimt av oändligheten — men kan ännu inte leva ut den.",
 
   "promptTitle": "Kontemplation",
-  "promptText": "Tänk om det mystiska inte är sällsynt — utan alltid närvarande, bara oupptäckt? Vad öppnas i dig när allting blir heligt?"
+  "promptText": "Tänk om det mystiska inte är sällsynt — utan alltid närvarande, bara oupptäckt? Vad öppnas i dig när allting blir heligt?",
+
+  "egoDeathTitle": "Självets upplösning",
+  "egoDeathText": "Egodöd — även kallad egoupplösning eller egodisintegration — är kanske den mest djupgående och transformativa mystiska upplevelsen. Det syftar på ett tillfälligt tillstånd där den vanliga känslan av ett jag löses upp, vilket blottar en mer grundläggande medvetenhet som existerar före den konstruerade identiteten.\n\nI detta tillstånd faller gränserna som tycks skilja \"jag\" från \"icke-jag\" bort. Det som återstår är inte omedvetenhet, utan en vid, klar medvetenhet som inte längre filtreras genom den personliga identitetens lins. Upplevelsen beskrivs ofta som:",
+  "egoDeathList": [
+    "En sammansmältning med allt",
+    "Ren medvetenhet utan en iakttagare",
+    "Att vara allt och inget samtidigt",
+    "Medvetande utan innehåll eller centrum"
+  ],
+  "egoDeathText2": "Till skillnad från andra mystiska tillstånd som kan förändra perceptionen men behålla iakttagaren, rubbar egodöd själva iakttagaren i grunden. Det kan kännas som att dö — inte fysiskt, utan som döden av den man trodde att man var.",
+
+  "pathsTitle": "Vägar till egodöd",
+  "pathsText": "Denna djupgående medvetandeförskjutning kan uppstå genom flera portaler:",
+  "pathsList": [
+    "Djup meditation: Särskilt inom traditioner som betonar tomhet (buddhism) eller icke-dualitet (Advaita Vedanta)",
+    "Entheogena upplevelser: Höga doser av psilocybin, LSD, DMT eller 5-MeO-DMT är kända katalysatorer",
+    "Andningsarbete: Holotropisk andning och andra intensiva andningstekniker",
+    "Ekstasis: Extatisk dans, musik eller sensorisk överväldigande",
+    "Nästan-döden-upplevelser: Djupa konfrontationer med dödlighet",
+    "Spontan uppkomst: Kan ibland inträffa utan uppenbar orsak"
+  ],
+
+  "paradoxTitle": "Paradoxen med \"icke-jag\"",
+  "paradoxText": "Ironin med egodöd är att det inte finns något \"du\" kvar som kan uppleva det — åtminstone inte i vanlig mening. Som det zenbuddhistiska talesättet säger: \"Som en snöflinga som löses upp i luften — vart tar den vägen? Den existerade aldrig riktigt från början.\"\n\nÄndå är det något som bevittnar även denna upplösning. Vad återstår när \"du\" är borta? Många traditioner föreslår att detta är vår sanna natur — medvetandet självt, före all identifikation och uppdelning.",
+
+  "integrationTitle": "Integration och återkomst",
+  "integrationText": "Återkomsten från egodöd medför ofta både stora utmaningar och gåvor:",
+  "integrationList": [
+    "En påtaglig förståelse av samhörighet",
+    "Minskad rädsla för fysisk död",
+    "Förändrade värderingar och prioriteringar",
+    "Uppgiften att leva utifrån ett vidare perspektiv i en konventionell verklighet",
+    "Ibland andliga kriser som kräver varsam integration"
+  ],
+  "integrationText2": "Kanske viktigast av allt visar egodöd att det vi kallar \"jag\" inte är en fast enhet utan en process — ett verb snarare än ett substantiv. Egots syfte är inte att förstöras, utan att hållas med större lätthet efter en glimt av det som ligger bortom det."
 }
 

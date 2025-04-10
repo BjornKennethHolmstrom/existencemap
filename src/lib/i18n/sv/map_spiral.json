@@ -15,6 +15,17 @@
   "chainText": "Vissa uppvaknanden är så lysande att vi vill hålla fast vid dem – upprepa dem. Men att klamra sig fast vid en nivå, även en andlig, blir ett fängelse. Spiralen bjuder oss att röra oss fritt – inte bära vår utveckling som rustning, utan gå med öppenhet.",
 
   "promptTitle": "Reflektion",
-  "promptText": "Tänk om nästa steg inte är uppåt – utan runt? Inte framåt – utan djupare?"
+  "promptText": "Tänk om nästa steg inte är uppåt – utan runt? Inte framåt – utan djupare?",
+
+  "stagnationTitle": "Cirkulär stagnation",
+  "stagnationText": "Inte alla spiraler leder till tillväxt. Ibland kretsar vi runt samma mönster utan verklig utveckling — vi misstar rörelse för framsteg. Dessa falska spiraler kan fånga oss i bekväm upprepning, och skapa en illusion av förändring samtidigt som status quo bibehålls.",
+  "stagnationList": [
+    "Den evige nybörjaren: Börjar ständigt nya praktiker men fördjupar dem aldrig",
+    "Insiktsberoende: Samlar på toppupplevelser utan att integrera deras visdom",
+    "Begreppsligt undvikande: Förstår tillväxt intellektuellt men undviker förkroppsligad förändring",
+    "Guruloopen: Söker ständigt nya lärare istället för att tillämpa redan lärda lektioner",
+    "Cirkulärt drama: Upprepar känslomönster med olika ansikten och platser"
+  ],
+  "stagnationText2": "Att känna igen dessa mönster är i sig ett spiralvarv. Vägen bort från stagnation handlar inte om tvång eller skam, utan om ärlig medvetenhet och varsam omstyrning. Ibland är det som verkar vara stillestånd i själva verket en nödvändig integrationsperiod — spiralen som drar ihop sig innan sin nästa expansion."
 }
 

@@ -57,6 +57,47 @@
     </ul>
   </div>
 
+  <!-- Ego Death - The Dissolution of Self -->
+  <div class="max-w-3xl mx-auto mb-16 space-y-4">
+    <h2 class="text-2xl font-semibold text-violet-800 dark:text-violet-200">{t.egoDeathTitle}</h2>
+    <p>{t.egoDeathText}</p>
+    <ul class="list-disc list-inside mt-4 space-y-2 text-sm">
+      {#each t.egoDeathList as item}
+        <li>{item}</li>
+      {/each}
+    </ul>
+    <p>{t.egoDeathText2}</p>
+  </div>
+
+  <!-- Paths to Ego-Death -->
+  <div class="max-w-3xl mx-auto mb-16 space-y-4">
+    <h2 class="text-2xl font-semibold text-violet-800 dark:text-violet-200">{t.pathsTitle}</h2>
+    <p>{t.pathsText}</p>
+    <ul class="list-disc list-inside mt-4 space-y-2 text-sm">
+      {#each t.pathsList as item}
+        <li>{item}</li>
+      {/each}
+    </ul>
+  </div>
+
+  <!-- The Paradox of "No-Self" -->
+  <div class="max-w-3xl mx-auto mb-16 space-y-4">
+    <h2 class="text-2xl font-semibold text-violet-800 dark:text-violet-200">{t.paradoxTitle}</h2>
+    <p>{t.paradoxText}</p>
+  </div>
+
+  <!-- Integration and Return -->
+  <div class="max-w-3xl mx-auto mb-16 space-y-4">
+    <h2 class="text-2xl font-semibold text-violet-800 dark:text-violet-200">{t.integrationTitle}</h2>
+    <p>{t.integrationText}</p>
+    <ul class="list-disc list-inside mt-4 space-y-2 text-sm">
+      {#each t.integrationList as item}
+        <li>{item}</li>
+      {/each}
+    </ul>
+    <p>{t.integrationText2}</p>
+  </div>
+
   <!-- States vs. Stages -->
   <div class="max-w-3xl mx-auto mb-16 space-y-4">
     <h2 class="text-2xl font-semibold text-violet-800 dark:text-violet-200">{t.stagesTitle}</h2>

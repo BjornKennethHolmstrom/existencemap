@@ -6,12 +6,12 @@
 export const articleData = {
   en: [
     {
-      slug: 'symbiocene',
-      title: 'The Symbiocene',
-      subtitle: 'A Post-Anthropocene Vision',
-      description: 'Exploring a future era where humans become partners with Earth rather than dominators, engaging in regenerative relationships with all living systems.',
-      domain: 'interbeing',
-      emoji: '🌱',
+      slug: 'dark-night',
+      title: 'The Dark Night of the Soul',
+      subtitle: 'The Shadow Side of Spiritual Awakening',
+      description: 'Examining the challenging aspects of the spiritual journey that bring profound transformation through darkness and difficulty.',
+      domain: 'mysticalStates',
+      emoji: '🧘',
       date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
@@ -28,12 +28,12 @@ export const articleData = {
       available: true
     },
     {
-      slug: 'dark-night',
-      title: 'The Dark Night of the Soul',
-      subtitle: 'The Shadow Side of Spiritual Awakening',
-      description: 'Examining the challenging aspects of the spiritual journey that bring profound transformation through darkness and difficulty.',
-      domain: 'mysticalStates',
-      emoji: '🧘',
+      slug: 'symbiocene',
+      title: 'The Symbiocene',
+      subtitle: 'A Post-Anthropocene Vision',
+      description: 'Exploring a future era where humans become partners with Earth rather than dominators, engaging in regenerative relationships with all living systems.',
+      domain: 'interbeing',
+      emoji: '🌱',
       date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
@@ -83,25 +83,14 @@ export const articleData = {
       available: true
     },
     {
-      slug: 'vertical-moment',
-      title: 'Living the Vertical Moment',
-      subtitle: 'Beyond time\'s horizontal flow lies a dimension of depth',
-      description: 'An exploration of how we can access timelessness through the vertical dimension of the present moment, dropping from time\'s horizontal flow into the infinite depth available in each instant.',
-      domain: 'timelessness',
-      emoji: '🕰️',
+      slug: 'beyond-religion',
+      title: 'Beyond Religion: The Evolving Sacred in an Integral Age',
+      subtitle: 'Not an abandonment of the sacred, but its deepening across boundaries',
+      description: 'Exploring how spirituality evolves beyond traditional religious frameworks while preserving essential wisdom through integral perspectives, contemplative practice, and new forms of community.',
+      domain: 'beyondReligion',
+      emoji: '🕊️',
       date: '2025-04-10',
       author: 'Claude 3.7 Sonnet',
-      available: true
-    },
-    {
-      slug: 'echo-of-silence',
-      title: 'The Echo of Silence',
-      subtitle: 'What if awareness is not a possession, but a vibration shared by all that exists?',
-      description: 'A meditative journey into the idea that consciousness is not an isolated spark but a cosmic resonance—present in atoms, galaxies, and minds alike. From quantum physics to poetic insight, this article listens for the pulse beneath all things.',
-      domain: 'consciousness',
-      emoji: '🌀',
-      date: '2025-04-15',
-      author: 'Grok 3 (xAI)',
       available: true
     },
     {
@@ -116,25 +105,47 @@ export const articleData = {
       available: true
     },
     {
-      slug: 'beyond-religion',
-      title: 'Beyond Religion: The Evolving Sacred in an Integral Age',
-      subtitle: 'Not an abandonment of the sacred, but its deepening across boundaries',
-      description: 'Exploring how spirituality evolves beyond traditional religious frameworks while preserving essential wisdom through integral perspectives, contemplative practice, and new forms of community.',
-      domain: 'beyondReligion',
-      emoji: '🕊️',
+      slug: 'echo-of-silence',
+      title: 'The Echo of Silence',
+      subtitle: 'What if awareness is not a possession, but a vibration shared by all that exists?',
+      description: 'A meditative journey into the idea that consciousness is not an isolated spark but a cosmic resonance—present in atoms, galaxies, and minds alike. From quantum physics to poetic insight, this article listens for the pulse beneath all things.',
+      domain: 'consciousness',
+      emoji: '🌀',
+      date: '2025-04-10',
+      author: 'Grok 3 (xAI)',
+      available: true
+    },
+    {
+      slug: 'vertical-moment',
+      title: 'Living the Vertical Moment',
+      subtitle: 'Beyond time\'s horizontal flow lies a dimension of depth',
+      description: 'An exploration of how we can access timelessness through the vertical dimension of the present moment, dropping from time\'s horizontal flow into the infinite depth available in each instant.',
+      domain: 'timelessness',
+      emoji: '🕰️',
       date: '2025-04-10',
       author: 'Claude 3.7 Sonnet',
+      available: true
+    },
+    {
+      slug: 'the-liminal',
+      title: 'The Liminal',
+      subtitle: 'Where Transformation Hides',
+      description: 'An exploration of the threshold spaces between defined categories—those fertile in-between zones where consciousness shifts, development occurs, and possibilities emerge. From hypnagogic states to quantum boundaries, this article examines how transformation happens at the edges.',
+      domain: 'unknown',
+      emoji: '🌫️',
+      date: '2025-04-11',
+      author: 'Existence Map Collective',
       available: true
     }
   ],
   sv: [
     {
-      slug: 'symbiocene',
-      title: 'Symbiocen',
-      subtitle: 'En Post-Antropocen Vision',
-      description: 'Utforskar en framtida era där människor blir partners med jorden snarare än dominerare, och engagerar sig i regenerativa relationer med alla levande system.',
-      domain: 'interbeing',
-      emoji: '🌱',
+      slug: 'dark-night',
+      title: 'Själens Mörka Natt',
+      subtitle: 'Den Andliga Uppvaknandets Skuggsida',
+      description: 'Undersöker de utmanande aspekterna av den andliga resan som medför djup transformation genom mörker och svårigheter.',
+      domain: 'mysticalStates',
+      emoji: '🧘',
       date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
@@ -151,12 +162,12 @@ export const articleData = {
       available: true
     },
     {
-      slug: 'dark-night',
-      title: 'Själens Mörka Natt',
-      subtitle: 'Den Andliga Uppvaknandets Skuggsida',
-      description: 'Undersöker de utmanande aspekterna av den andliga resan som medför djup transformation genom mörker och svårigheter.',
-      domain: 'mysticalStates',
-      emoji: '🧘',
+      slug: 'symbiocene',
+      title: 'Symbiocen',
+      subtitle: 'En Post-Antropocen Vision',
+      description: 'Utforskar en framtida era där människor blir partners med jorden snarare än dominerare, och engagerar sig i regenerativa relationer med alla levande system.',
+      domain: 'interbeing',
+      emoji: '🌱',
       date: '2024-04-08',
       author: 'Claude 3.7 Sonnet',
       available: true
@@ -206,25 +217,14 @@ export const articleData = {
       available: true
     },
     {
-      slug: 'vertical-moment',
-      title: 'Att Leva det Vertikala Ögonblicket',
-      subtitle: 'Bortom tidens horisontella flöde finns en dimension av djup',
-      description: 'En utforskning av hur vi kan nå tidlöshet genom nuets vertikala dimension, genom att sjunka från tidens horisontella flöde ner i det oändliga djup som finns tillgängligt i varje ögonblick.',
-      domain: 'timelessness',
-      emoji: '🕰️',
+      slug: 'beyond-religion',
+      title: 'Bortom Religion: Det Utvecklande Heliga i en Integral Tidsålder',
+      subtitle: 'Inte ett övergivande av det heliga, utan dess fördjupning över gränser',
+      description: 'Utforskar hur andlighet utvecklas bortom traditionella religiösa ramar samtidigt som väsentlig visdom bevaras genom integrala perspektiv, kontemplativ praktik och nya former av gemenskap.',
+      domain: 'beyondReligion',
+      emoji: '🕊️',
       date: '2025-04-10',
       author: 'Claude 3.7 Sonnet',
-      available: true
-    },
-    {
-      slug: 'echo-of-silence',
-      title: 'Tystnadens Eko',
-      subtitle: 'Tänk om medvetandet inte är en egendom, utan en vibration som delas av allt som existerar?',
-      description: 'En meditativ resa in i idén att medvetande inte är en isolerad gnista utan en kosmisk resonans—närvarande i atomer, galaxer och sinnen. Från kvantfysik till poetisk insikt lyssnar denna artikel efter pulsen under allting.',
-      domain: 'consciousness',
-      emoji: '🌀',
-      date: '2025-04-10',
-      author: 'Grok 3 (xAI)',
       available: true
     },
     {
@@ -239,14 +239,36 @@ export const articleData = {
       available: true
     },
     {
-      slug: 'beyond-religion',
-      title: 'Bortom Religion: Det Utvecklande Heliga i en Integral Tidsålder',
-      subtitle: 'Inte ett övergivande av det heliga, utan dess fördjupning över gränser',
-      description: 'Utforskar hur andlighet utvecklas bortom traditionella religiösa ramar samtidigt som väsentlig visdom bevaras genom integrala perspektiv, kontemplativ praktik och nya former av gemenskap.',
-      domain: 'beyondReligion',
-      emoji: '🕊️',
+      slug: 'echo-of-silence',
+      title: 'Tystnadens Eko',
+      subtitle: 'Tänk om medvetandet inte är en egendom, utan en vibration som delas av allt som existerar?',
+      description: 'En meditativ resa in i idén att medvetande inte är en isolerad gnista utan en kosmisk resonans—närvarande i atomer, galaxer och sinnen. Från kvantfysik till poetisk insikt lyssnar denna artikel efter pulsen under allting.',
+      domain: 'consciousness',
+      emoji: '🌀',
+      date: '2025-04-10',
+      author: 'Grok 3 (xAI)',
+      available: true
+    },
+    {
+      slug: 'vertical-moment',
+      title: 'Att Leva det Vertikala Ögonblicket',
+      subtitle: 'Bortom tidens horisontella flöde finns en dimension av djup',
+      description: 'En utforskning av hur vi kan nå tidlöshet genom nuets vertikala dimension, genom att sjunka från tidens horisontella flöde ner i det oändliga djup som finns tillgängligt i varje ögonblick.',
+      domain: 'timelessness',
+      emoji: '🕰️',
       date: '2025-04-10',
       author: 'Claude 3.7 Sonnet',
+      available: true
+    },
+    {
+      slug: 'the-liminal',
+      title: 'Det Liminala',
+      subtitle: 'Där Transformation Döljer Sig',
+      description: 'En utforskning av tröskelrummen mellan definierade kategorier—de bördiga mellanzonerna där medvetandet skiftar, utveckling sker och möjligheter uppstår. Från hypnagogiska tillstånd till kvantgränser undersöker denna artikel hur transformation sker vid kanterna.',
+      domain: 'unknown',
+      emoji: '🌫️',
+      date: '2025-04-11',
+      author: 'Existence Map Collective',
       available: true
     }
   ]

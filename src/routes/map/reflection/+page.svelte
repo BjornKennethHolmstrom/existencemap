@@ -52,6 +52,18 @@
     </ul>
   </div>
 
+  <!-- Self-Deception -->
+  <div class="max-w-3xl mx-auto mb-16 space-y-4">
+    <h2 class="text-2xl font-semibold">{t.deceptionTitle}</h2>
+    <p>{t.deceptionText}</p>
+    <ul class="list-disc list-inside space-y-1 text-sm">
+      {#each t.deceptionList as item}
+        <li>{item}</li>
+      {/each}
+    </ul>
+    <p>{t.deceptionText2}</p>
+  </div>
+
   <!-- Integration -->
   <div class="max-w-3xl mx-auto mb-16 space-y-4">
     <h2 class="text-2xl font-semibold">{t.integrationTitle}</h2>
