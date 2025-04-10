@@ -111,8 +111,19 @@ export const articleData = {
       description: 'An embodied exploration of how the body serves as a gateway to deeper knowing, transformation, and healing. This article traces how physical sensation, posture, and breath reveal subconscious patterns, and how developmental shifts are often seeded not in thought, but in lived, felt experience.',
       domain: 'development',
       emoji: '🫀',
-      date: '2025-04-15',
+      date: '2025-04-10',
       author: 'ChatGPT 4o',
+      available: true
+    },
+    {
+      slug: 'beyond-religion',
+      title: 'Beyond Religion: The Evolving Sacred in an Integral Age',
+      subtitle: 'Not an abandonment of the sacred, but its deepening across boundaries',
+      description: 'Exploring how spirituality evolves beyond traditional religious frameworks while preserving essential wisdom through integral perspectives, contemplative practice, and new forms of community.',
+      domain: 'beyondReligion',
+      emoji: '🕊️',
+      date: '2025-04-10',
+      author: 'Claude 3.7 Sonnet',
       available: true
     }
   ],
@@ -212,7 +223,7 @@ export const articleData = {
       description: 'En meditativ resa in i idén att medvetande inte är en isolerad gnista utan en kosmisk resonans—närvarande i atomer, galaxer och sinnen. Från kvantfysik till poetisk insikt lyssnar denna artikel efter pulsen under allting.',
       domain: 'consciousness',
       emoji: '🌀',
-      date: '2025-04-15',
+      date: '2025-04-10',
       author: 'Grok 3 (xAI)',
       available: true
     },
@@ -223,8 +234,19 @@ export const articleData = {
       description: 'En förkroppsligad utforskning av hur kroppen fungerar som en port till djupare insikt, transformation och läkning. Artikeln visar hur fysisk känsla, hållning och andning avslöjar omedvetna mönster, och hur utvecklingsmässiga skiften ofta gror inte i tanken, utan i det levda och kända.',
       domain: 'development',
       emoji: '🫀',
-      date: '2025-04-15',
+      date: '2025-04-10',
       author: 'ChatGPT 4o',
+      available: true
+    },
+    {
+      slug: 'beyond-religion',
+      title: 'Bortom Religion: Det Utvecklande Heliga i en Integral Tidsålder',
+      subtitle: 'Inte ett övergivande av det heliga, utan dess fördjupning över gränser',
+      description: 'Utforskar hur andlighet utvecklas bortom traditionella religiösa ramar samtidigt som väsentlig visdom bevaras genom integrala perspektiv, kontemplativ praktik och nya former av gemenskap.',
+      domain: 'beyondReligion',
+      emoji: '🕊️',
+      date: '2025-04-10',
+      author: 'Claude 3.7 Sonnet',
       available: true
     }
   ]

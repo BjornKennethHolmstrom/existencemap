@@ -3,9 +3,8 @@
   import MysticParticles from '$lib/components/MysticParticles.svelte';
   import MysticCard from '$lib/components/MysticCard.svelte';
   import DomainNav from '$lib/components/DomainNav.svelte';
-  import RelatedArticles from '$lib/components/RelatedArticles.svelte';
   import ShareButtons from '$lib/components/ShareButtons.svelte';
-  import { page } from '$app/stores';
+  import SpiralDynamics from '$lib/components/SpiralDynamics.svelte';
   import { langStore } from '$lib/stores/langStore';
   import { getTranslation } from '$lib/i18n';
 
@@ -41,7 +40,11 @@
   <div class="max-w-3xl mx-auto mb-16 space-y-4">
     <h2 class="text-2xl font-semibold text-emerald-800 dark:text-emerald-200">{t.modelsTitle}</h2>
     <p>{t.modelsText}</p>
-    <a href="https://spiralize.org" class="text-emerald-600 dark:text-emerald-300 underline hover:text-emerald-800 transition">
+    
+    <!-- Interactive Spiral Dynamics Component -->
+    <SpiralDynamics />
+    
+    <a href="https://spiralize.org" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-300 underline hover:text-emerald-800 transition block mt-4 text-center">
       {t.spiralizeLink}
     </a>
   </div>
@@ -71,11 +74,8 @@
     </MysticCard>
   </div>
 
-  <RelatedArticles domain="development" />
-
-  <div class="mt-12 border-t border-indigo-100 dark:border-indigo-800 pt-8">
+  <div class="mt-12 border-t border-indigo-100 dark:border-indigo-800 pt-8 max-w-3xl mx-auto">
     <ShareButtons title={shareTitle} description={shareDescription} />
   </div>
 
 </MysticSection>
-

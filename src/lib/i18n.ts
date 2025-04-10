@@ -20,6 +20,7 @@ import map_timelessness_en from '$i18n/en/map_timelessness.json';
 import articles_en from '$i18n/en/articles.json';
 import contact_en from '$i18n/en/contact.json';
 import share_en from '$i18n/en/share.json';
+import spiral_dynamics_en from '$i18n/en/spiral_dynamics.json';
 
 import common_sv from '$i18n/sv/common.json';
 import footer_sv from '$i18n/sv/footer.json';
@@ -43,6 +44,7 @@ import map_timelessness_sv from '$i18n/sv/map_timelessness.json';
 import articles_sv from '$i18n/sv/articles.json';
 import contact_sv from '$i18n/sv/contact.json';
 import share_sv from '$i18n/sv/share.json';
+import spiral_dynamics_sv from '$i18n/sv/spiral_dynamics.json';
 
 const translations = {
   en: {
@@ -68,6 +70,8 @@ const translations = {
     articles: articles_en,
     contact: contact_en,
     share: share_en,
+    spiral_dynamics: spiral_dynamics_en,
+
   },
   sv: {
     common: common_sv,
@@ -92,6 +96,8 @@ const translations = {
     articles: articles_sv,
     contact: contact_sv,
     share: share_sv,
+    spiral_dynamics: spiral_dynamics_sv,
+
   }
 };
 

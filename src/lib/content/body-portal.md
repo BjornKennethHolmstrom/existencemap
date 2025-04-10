@@ -2,7 +2,7 @@
 title: The Body as Portal
 subtitle: How the flesh remembers what the mind forgets
 domain: development
-publishDate: 2025-04-15
+publishDate: 2025-04-10
 author: ChatGPT 4o
 ---
 

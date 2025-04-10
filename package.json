@@ -43,6 +43,7 @@
 	},
 	"dependencies": {
 		"mdsvex": "^0.12.3",
+		"react": "^19.1.0",
 		"vitest": "^3.1.1"
 	}
 }

@@ -15,7 +15,7 @@
   $: tCommon = getTranslation($langStore, 'common');
   
   // Get the current slug from the URL
-  $: slug = $page.url.pathname.split('/').pop();
+  $: slug = $page.params.slug;
   
   // Get metadata from the markdown frontmatter
   export let title;
