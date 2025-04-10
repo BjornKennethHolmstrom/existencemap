@@ -1,6 +1,8 @@
 <!-- src/lib/components/layouts/ArticleLayout.svelte -->
 <script>
   import MysticSection from '$lib/components/MysticSection.svelte';
+  import ShareButtons from '$lib/components/ShareButtons.svelte';
+  import RelatedArticles from '$lib/components/RelatedArticles.svelte';
   import { base } from '$app/paths';
   import { page } from '$app/stores';
   import { langStore } from '$lib/stores/langStore';
@@ -52,6 +54,11 @@
   $: homeUrl = addLangToRoute(getRoute(''), $langStore);
   $: articlesUrl = addLangToRoute(getRoute('articles'), $langStore);
   $: domainUrl = articleDomain ? addLangToRoute(getRoute(`map/${articleDomain}`), $langStore) : '';
+  
+  // Prepare share information
+  $: shareTitle = articleTitle;
+  $: shareDescription = articleSubtitle || 
+                       `Explore "${articleTitle}" - an article about ${domainTranslated} on Existence Map`;
 </script>
 
 <MysticSection className="max-w-3xl mx-auto">
@@ -99,6 +106,16 @@
     <article class="prose prose-lg dark:prose-invert prose-indigo max-w-none mx-auto">
       <slot />
     </article>
+    
+    <!-- Share buttons -->
+    <div class="mt-12 border-t border-indigo-100 dark:border-indigo-800 pt-8">
+      <ShareButtons title={shareTitle} description={shareDescription} className="mb-8" />
+    </div>
+    
+    <!-- Related articles if domain is available -->
+    {#if showDomainNav && articleDomain}
+      <RelatedArticles domain={articleDomain} />
+    {/if}
     
     <!-- Related domain nav if applicable -->
     {#if showDomainNav}

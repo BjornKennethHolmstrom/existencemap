@@ -3,14 +3,27 @@
   import MysticParticles from '$lib/components/MysticParticles.svelte';
   import MysticCard from '$lib/components/MysticCard.svelte';
   import DomainNav from '$lib/components/DomainNav.svelte';
+  import ShareButtons from '$lib/components/ShareButtons.svelte';
+  import { page } from '$app/stores';
   import { langStore } from '$lib/stores/langStore';
   import { getTranslation } from '$lib/i18n';
 
   $: t = getTranslation($langStore, 'map_reflection');
+
+  // Get translations and domain info
+  $: tCommon = getTranslation($langStore, 'common');
+  const domain = 'reflection';
+  $: domainTranslated = tCommon[domain] || domain;
+  
+  // Prepare share information specific to this domain
+  $: shareTitle = `${domainTranslated} | Existence Map`;
+  $: shareDescription = `Explore the concept of ${domainTranslated.toLowerCase()} in this contemplative journey through consciousness, reality, and mystery.`;
 </script>
 
 <MysticSection className="text-fuchsia-900 dark:text-fuchsia-100 pt-12 pb-32">
   <MysticParticles />
+
+  <DomainNav />
 
   <h1 class="text-4xl md:text-5xl font-display font-bold text-center mb-4">{t.title}</h1>
   <p class="text-center text-fuchsia-700 dark:text-fuchsia-300 mb-12 max-w-3xl mx-auto">
@@ -52,6 +65,9 @@
     </MysticCard>
   </div>
 
-  <DomainNav />
+  <div class="mt-12 border-t border-indigo-100 dark:border-indigo-800 pt-8">
+    <ShareButtons title={shareTitle} description={shareDescription} />
+  </div>
+
 </MysticSection>
 

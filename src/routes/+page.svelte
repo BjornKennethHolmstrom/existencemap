@@ -7,6 +7,10 @@
   import { langStore } from '$lib/stores/langStore';
   import { getTranslation } from '$lib/i18n';
   import { base } from '$app/paths'; // Import base path
+  import ShareButtons from '$lib/components/ShareButtons.svelte';
+  
+  const shareTitle = "Existence Map - A multidimensional map of consciousness"; 
+  const shareDescription = "A contemplative journey through various lenses of consciousness, exploring reality and mystery through interactive maps and reflective articles.";
 
   $: t = getTranslation($langStore, 'home');
 
@@ -51,5 +55,9 @@
     <MysticCard title={t.webTitle} color="emerald">
       <p class="text-sm text-gray-600 dark:text-gray-300">{t.webText}</p>
     </MysticCard>
+  </div>
+
+  <div class="mt-16 mb-8 max-w-md mx-auto">
+    <ShareButtons {shareTitle} {shareDescription} />
   </div>
 </MysticSection>

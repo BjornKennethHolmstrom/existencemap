@@ -19,6 +19,7 @@ import map_beyond_religion_en from '$i18n/en/map_beyond_religion.json';
 import map_timelessness_en from '$i18n/en/map_timelessness.json';
 import articles_en from '$i18n/en/articles.json';
 import contact_en from '$i18n/en/contact.json';
+import share_en from '$i18n/en/share.json';
 
 import common_sv from '$i18n/sv/common.json';
 import footer_sv from '$i18n/sv/footer.json';
@@ -41,6 +42,7 @@ import map_beyond_religion_sv from '$i18n/sv/map_beyond_religion.json';
 import map_timelessness_sv from '$i18n/sv/map_timelessness.json';
 import articles_sv from '$i18n/sv/articles.json';
 import contact_sv from '$i18n/sv/contact.json';
+import share_sv from '$i18n/sv/share.json';
 
 const translations = {
   en: {
@@ -65,6 +67,7 @@ const translations = {
     map_timelessness: map_timelessness_en,
     articles: articles_en,
     contact: contact_en,
+    share: share_en,
   },
   sv: {
     common: common_sv,
@@ -88,6 +91,7 @@ const translations = {
     map_timelessness: map_timelessness_sv,
     articles: articles_sv,
     contact: contact_sv,
+    share: share_sv,
   }
 };
 
