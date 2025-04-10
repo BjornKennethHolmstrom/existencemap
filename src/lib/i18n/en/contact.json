@@ -1,0 +1,20 @@
+{
+  "title": "Share Your Journey",
+  "subtitle": "A space for connection, reflection, and shared exploration",
+  "introduction": "This map is not complete without your voice. Whether you've had insights sparked by these pages, questions that linger, or contributions to offer—this is a space where our paths can intersect.",
+  "namePlaceholder": "Your name",
+  "emailPlaceholder": "Your email",
+  "reasonLabel": "Nature of your message",
+  "reasonOptions": {
+    "reflection": "Personal reflection",
+    "question": "Question or curiosity",
+    "feedback": "Feedback on the map",
+    "suggestion": "Suggestion or contribution",
+    "other": "Something else entirely"
+  },
+  "messagePlaceholder": "Share your thoughts, questions, or reflections...",
+  "submit": "Send forth",
+  "successMessage": "Message received with gratitude. I'll respond when the stars align (usually within a few days).",
+  "errorMessage": "Something in the cosmic web went awry. Please try again or reach out directly.",
+  "quote": "Every genuine question creates a space where truth can breathe."
+}

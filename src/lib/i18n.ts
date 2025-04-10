@@ -1,4 +1,5 @@
 import common_en from '$i18n/en/common.json';
+import footer_en from '$i18n/en/footer.json';
 import home_en from '$i18n/en/home.json';
 import about_en from '$i18n/en/about.json';
 import credits_en from '$i18n/en/credits.json';
@@ -17,8 +18,10 @@ import map_other_en from '$i18n/en/map_other.json';
 import map_beyond_religion_en from '$i18n/en/map_beyond_religion.json';
 import map_timelessness_en from '$i18n/en/map_timelessness.json';
 import articles_en from '$i18n/en/articles.json';
+import contact_en from '$i18n/en/contact.json';
 
 import common_sv from '$i18n/sv/common.json';
+import footer_sv from '$i18n/sv/footer.json';
 import home_sv from '$i18n/sv/home.json';
 import about_sv from '$i18n/sv/about.json';
 import credits_sv from '$i18n/sv/credits.json';
@@ -37,10 +40,12 @@ import map_other_sv from '$i18n/sv/map_other.json';
 import map_beyond_religion_sv from '$i18n/sv/map_beyond_religion.json';
 import map_timelessness_sv from '$i18n/sv/map_timelessness.json';
 import articles_sv from '$i18n/sv/articles.json';
+import contact_sv from '$i18n/sv/contact.json';
 
 const translations = {
   en: {
     common: common_en,
+    footer: footer_en,
     home: home_en,
     about: about_en,
     credits: credits_en,
@@ -59,9 +64,11 @@ const translations = {
     map_beyond_religion: map_beyond_religion_en,
     map_timelessness: map_timelessness_en,
     articles: articles_en,
+    contact: contact_en,
   },
   sv: {
     common: common_sv,
+    footer: footer_sv,
     home: home_sv,
     about: about_sv,
     credits: credits_sv,
@@ -80,6 +87,7 @@ const translations = {
     map_beyond_religion: map_beyond_religion_sv,
     map_timelessness: map_timelessness_sv,
     articles: articles_sv,
+    contact: contact_sv,
   }
 };
 

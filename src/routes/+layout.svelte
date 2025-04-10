@@ -1,7 +1,9 @@
+<!-- src/routes/+layout.svelte -->
 <script lang="ts">
   import '../app.css';
   import MysticParticles from '$lib/components/MysticParticles.svelte';
   import Header from '$lib/components/Header.svelte';
+  import Footer from '$lib/components/Footer.svelte';
   import { langStore } from '$lib/stores/langStore';
   export let data;
 
@@ -13,13 +15,8 @@
   <Header {lang} />
 
   <main class="flex-1 p-4 md:p-8 max-w-6xl mx-auto w-full">
-
-
     <slot />
   </main>
 
-  <footer class="text-center text-xs text-gray-500 py-6">
-    © {new Date().getFullYear()} Björn Kenneth Holmström.
-  </footer>
+  <Footer />
 </div>
-

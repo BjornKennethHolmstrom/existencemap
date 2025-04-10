@@ -7,6 +7,8 @@
   import { getTranslation } from '$lib/i18n';
   import { base } from '$app/paths';
   import { addLangParam } from '$lib/utils/langUrl';
+  import { onMount } from 'svelte';
+  import { browser } from '$app/environment';
 
   $: t = getTranslation($langStore, 'map');
 
@@ -27,6 +29,38 @@
   
   // Function to generate URLs with language parameters
   $: getDomainUrl = (key) => addLangParam(`${base}/map/${key}`, $langStore);
+
+  // Responsive radius calculation - adjust radius based on container size
+  let containerWidth = 0;
+  let containerHeight = 0;
+  let radius = 22; // Increased default value in rem (was 18)
+  let containerElement;
+
+  function updateRadius() {
+    if (!browser || !containerElement) return;
+    
+    // Get current container dimensions
+    const rect = containerElement.getBoundingClientRect();
+    containerWidth = rect.width;
+    containerHeight = rect.height;
+    
+    // Use the smaller dimension to determine radius (accounting for card size)
+    const minDimension = Math.min(containerWidth, containerHeight);
+    
+    // Increased coefficient from 0.75 to 0.85 for more horizontal separation
+    radius = (minDimension / 2) * 0.85;
+    
+    // Convert to rem for consistency (assuming 16px base font size)
+    radius = radius / 16;
+  }
+
+  onMount(() => {
+    if (browser) {
+      updateRadius();
+      window.addEventListener('resize', updateRadius);
+      return () => window.removeEventListener('resize', updateRadius);
+    }
+  });
 </script>
 
 <MysticSection className="min-h-[calc(100vh-64px)] flex flex-col items-center justify-center text-center">
@@ -51,13 +85,16 @@
     {/each}
   </div>
   
-  <!-- Desktop Layout: Radial -->
-  <div class="hidden md:block relative w-[32rem] h-[32rem] lg:w-[40rem] lg:h-[40rem] xl:w-[48rem] xl:h-[42rem]">
+  <!-- Desktop Layout: Radial with improved horizontal spacing -->
+  <div 
+    bind:this={containerElement}
+    class="hidden md:block relative w-full max-w-7xl h-[32rem] lg:h-[40rem] xl:h-[46rem]"
+  >
     {#each domains as { icon, key }, i}
       <a
         href={getDomainUrl(key)}
         class="absolute transition transform hover:scale-105 cursor-pointer"
-        style={`top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(${i * (360 / domains.length)}deg) translate(18rem) rotate(-${i * (360 / domains.length)}deg);`}
+        style={`top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(${i * (360 / domains.length)}deg) translateX(${radius}rem) rotate(-${i * (360 / domains.length)}deg);`}
       >
         <MysticCard title={t[key]}>
           <div class="text-2xl">{icon}</div>

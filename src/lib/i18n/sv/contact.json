@@ -1,0 +1,20 @@
+{
+  "title": "Dela Din Resa",
+  "subtitle": "En plats för kontakt, reflektion och gemensam utforskning",
+  "introduction": "Denna karta är inte komplett utan din röst. Oavsett om du fått insikter från dessa sidor, har frågor som dröjer kvar, eller bidrag att erbjuda—detta är ett utrymme där våra vägar kan mötas.",
+  "namePlaceholder": "Ditt namn",
+  "emailPlaceholder": "Din e-post",
+  "reasonLabel": "Meddelandets natur",
+  "reasonOptions": {
+    "reflection": "Personlig reflektion",
+    "question": "Fråga eller nyfikenhet",
+    "feedback": "Återkoppling om kartan",
+    "suggestion": "Förslag eller bidrag",
+    "other": "Något helt annat"
+  },
+  "messagePlaceholder": "Dela dina tankar, frågor eller reflektioner...",
+  "submit": "Sänd iväg",
+  "successMessage": "Meddelande mottaget med tacksamhet. Jag svarar när stjärnorna står rätt (vanligtvis inom några dagar).",
+  "errorMessage": "Något i det kosmiska nätet gick fel. Vänligen försök igen eller kontakta mig direkt.",
+  "quote": "Varje äkta fråga skapar ett utrymme där sanningen kan andas."
+}
