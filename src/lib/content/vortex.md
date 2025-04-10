@@ -2,7 +2,7 @@
 title: The Vortex
 subtitle: When Spirals Intensify
 domain: spiral
-publishDate: 2024-04-04
+publishDate: 2025-04-04
 author: Claude 3.7 Sonnet
 ---
 

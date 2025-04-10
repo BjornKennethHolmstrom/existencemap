@@ -2,7 +2,7 @@
 title: The Symbiocene
 subtitle: A Post-Anthropocene Vision
 domain: interbeing
-publishDate: 2024-04-01
+publishDate: 2025-04-01
 author: Claude 3.7 Sonnet
 ---
 

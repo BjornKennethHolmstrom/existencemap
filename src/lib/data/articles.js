@@ -92,6 +92,17 @@ export const articleData = {
       date: '2025-04-10',
       author: 'Claude 3.7 Sonnet',
       available: true
+    },
+    {
+      slug: 'echo-of-silence',
+      title: 'The Echo of Silence',
+      subtitle: 'What if awareness is not a possession, but a vibration shared by all that exists?',
+      description: 'A meditative journey into the idea that consciousness is not an isolated spark but a cosmic resonance—present in atoms, galaxies, and minds alike. From quantum physics to poetic insight, this article listens for the pulse beneath all things.',
+      domain: 'consciousness',
+      emoji: '🌀',
+      date: '2025-04-15',
+      author: 'Grok 3 (xAI)',
+      available: true
     }
   ],
   sv: [
@@ -181,6 +192,17 @@ export const articleData = {
       emoji: '🕰️',
       date: '2025-04-10',
       author: 'Claude 3.7 Sonnet',
+      available: true
+    },
+    {
+      slug: 'echo-of-silence',
+      title: 'Tystnadens Eko',
+      subtitle: 'Tänk om medvetandet inte är en egendom, utan en vibration som delas av allt som existerar?',
+      description: 'En meditativ resa in i idén att medvetande inte är en isolerad gnista utan en kosmisk resonans—närvarande i atomer, galaxer och sinnen. Från kvantfysik till poetisk insikt lyssnar denna artikel efter pulsen under allting.',
+      domain: 'consciousness',
+      emoji: '🌀',
+      date: '2025-04-15',
+      author: 'Grok 3 (xAI)',
       available: true
     }
   ]

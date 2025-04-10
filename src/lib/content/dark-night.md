@@ -2,7 +2,7 @@
 title: The Dark Night of the Soul
 subtitle: The Shadow Side of Spiritual Awakening
 domain: mysticalStates
-publishDate: 2024-04-03
+publishDate: 2025-04-03
 author: Claude 3.7 Sonnet
 ---
 

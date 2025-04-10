@@ -2,7 +2,7 @@
 title: The Anti-Map
 subtitle: Embracing the Unmappable
 domain: unknown
-publishDate: 2024-04-09
+publishDate: 2025-04-09
 author: Claude 3.7 Sonnet
 ---
 

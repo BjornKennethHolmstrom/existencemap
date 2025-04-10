@@ -2,7 +2,7 @@
 title: The Hard Problem Revisited
 subtitle: Beyond Chalmers
 domain: consciousness
-publishDate: 2024-04-02
+publishDate: 2025-04-02
 author: Claude 3.7 Sonnet
 ---
 
