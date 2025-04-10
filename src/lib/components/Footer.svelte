@@ -100,10 +100,10 @@
         
         <!-- Email link (optional) -->
         <a 
-          href="mailto:mail@bjornkh.com" 
+          href="mailto:bjorn.kenneth.holmstrom@gmail.com" 
           class="text-indigo-600 dark:text-indigo-300 hover:text-violet-600 dark:hover:text-violet-300 transition"
         >
-          ✉️ mail@bjornkh.com
+          ✉️ bjorn.kenneth.holmstrom@gmail.com
         </a>
       </div>
     </div>
