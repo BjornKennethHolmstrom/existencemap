@@ -3,6 +3,7 @@
   import { langStore } from '$lib/stores/langStore';
   import { getTranslation } from '$lib/i18n';
   import { getRoute, addLangToRoute } from '$lib/utils/hashRoutes';
+  import { Github } from 'lucide-svelte';
   
   // Get translations
   $: t = getTranslation($langStore, 'common');
@@ -30,7 +31,7 @@
   
   // Social media links
   const socialLinks = [
-    { url: 'https://github.com/bjornksh/existencemap', label: 'GitHub', icon: 'GitHub' },
+    { url: 'https://github.com/bjornkennethholmstrom/existencemap', label: 'GitHub'},
     // Add more social links as needed
   ];
 
@@ -87,14 +88,17 @@
         </h3>
         
         <!-- Social links -->
-        {#each socialLinks as { url, label, icon }}
+        {#each socialLinks as { url, label }}
           <a 
             href={url} 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="text-indigo-600 dark:text-indigo-300 hover:text-violet-600 dark:hover:text-violet-300 transition"
+            class="flex items-center space-x-2 text-indigo-600 dark:text-indigo-300 hover:text-violet-600 dark:hover:text-violet-300 transition"
           >
-            {icon} {label}
+            {#if label === 'GitHub'}
+              <Github class="w-4 h-4" />
+            {/if}
+            <span>{label}</span>
           </a>
         {/each}
         
