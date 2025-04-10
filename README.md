@@ -3,56 +3,95 @@
 **A multidimensional map of consciousness, reality, and mystery.**  
 Created with SvelteKit, TailwindCSS, and wonder.
 
+## 🌐 Live Site
+
+Explore the map at [existencemap.org](https://existencemap.org)
+
 ## 🧭 Vision
 
 Existence Map is a contemplative and exploratory web project that invites visitors to journey through various layers and lenses of consciousness. It is not a dogma but a doorway—a living mandala where spirituality, psychology, mysticism, metaphysics, and the unknown intersect.
 
-This map honors both structure and silence. It includes Spiral Dynamics, mystical states, Buddhist insights on emptiness and impermanence, Leo Gura’s Infinite Mind, feminine and alien perspectives, as well as the voices of other beings: stars, minerals, animals, AI, and the unknowable.
+This map honors both structure and silence. It includes Spiral Dynamics, mystical states, Buddhist insights on emptiness and impermanence, themes of consciousness, interbeing, the unknown, and perspectives from the feminine, the alien, and beyond religion.
 
-## 🌐 URL
+> "This is not a map to control the world—  
+> but a mirror through which the world awakens itself."  
 
-Soon to be launched at [existencemap.org](http://existencemap.org)
-
-## 🧰 Stack
+## 🧰 Technology Stack
 
 - [SvelteKit](https://kit.svelte.dev/) with TypeScript
 - TailwindCSS (with Typography and Forms plugins)
 - mdsvex for writing soulful content in Markdown + Svelte
-- Static adapter for simple deployment (e.g., GitHub Pages or Vercel)
+- Static adapter for simple deployment via GitHub Pages
+- Hash-based routing for seamless navigation
+- Internationalization support (currently English and Swedish)
 
-## 🌀 Planned Domains of the Map
+## 📝 Content Structure
 
-These represent lenses or realms of awareness, each with its own interactive experience:
+### Domains of the Map
 
-1. **Developmental Spiral** – Spiral Dynamics, Wilber, ego development
-2. **States & Transcendence** – mystical states, Leo Gura’s Infinite Mind, Buddhist emptiness
-3. **Relational Web of Being** – animism, systems, all beings as alive
-4. **Symbolic / Archetypal Realms** – sacred geometry, myth, Jungian archetypes
-5. **Alien / Transhuman Perspectives** – beyond-human perception, machine consciousness
-6. **Feminine / Embodied Awareness** – cyclical time, eros, presence, flow
-7. **Selfhood & Shadow** – masks, avatars, integration
-8. **The Unknown** – the void, chaos, God-beyond-God, mystery
+The map is organized around interconnected domains of exploration:
 
-## 🎨 Logo Inspiration for Claude
+1. **Consciousness** – The light by which we see all things
+2. **Development** – Spiral dynamics, stages of growth, the golden chain
+3. **Mystical States** – States of consciousness and ego dissolution
+4. **Interbeing** – The web of interconnectedness where nothing exists alone
+5. **The Unknown** – Mystery, the void, and what lies beyond maps
+6. **Cosmos** – Vastness, origins, and the infinite
+7. **Reflection** – The mirror of self-awareness
+8. **The Spiral** – Growth as a non-linear path
+9. **The Feminine** – Flowing wisdom beyond gender
+10. **The Other** – Alien consciousness and the stranger within
+11. **Beyond Religion** – The sacred without walls
+12. **Timelessness** – The eternal now
 
-Please generate an SVG logo that reflects the spirit of this project. It should:
+### Articles & Essays
 
-- Be **symbolic**, not literal (avoid text or detailed illustration)
-- Feel **cosmic, sacred, and open-ended**
-- Possibly include **mandala-like geometry** or **spiral forms**
-- Communicate a sense of **mystery**, **depth**, and **interconnectedness**
-- Be usable in both **light and dark** themes
+The site features thoughtful articles that expand on map themes:
 
-Optional motifs:  
-✨ Spiral, mandala, eye, void, geometry, subtle organic flow, or symbolic infinity.
+- **The Anti-Map** – Embracing the unmappable
+- **Boundaries and Boundlessness** – The body as portal
+- **The Dark Night of the Soul** – Shadow sides of awakening
+- **The Echo of Silence** – Consciousness as resonance
+- **The Hard Problem Revisited** – Beyond Chalmers
+- **The Mirror Beyond the Map** – When the alien reflects ourselves
+- **The Symbiocene** – A post-Anthropocene vision
+- **The Vertical Moment** – Beyond time's horizontal flow
+- **The Vortex** – When spirals intensify
 
-## 🧙 Creator
+## 🧙 Creator & Contributors
 
-Björn Kenneth Holmström  
-With mystical assistance from ChatGPT, Claude and DeepSeek
+- **Björn Kenneth Holmström** – Vision, concept, development
+- With mystical assistance from:
+  - ChatGPT (OpenAI)
+  - Claude (Anthropic)
+  - DeepSeek
+  - Grok (xAI)
+
+## 🚀 Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 📚 Future Directions
+
+Planned additions include:
+
+- Deeper exploration of liminal spaces between domains
+- Interactive meditations and contemplative practices
+- Community contributions and shared insights
+- Expanded multilingual support
 
 ---
 
-> “This is not a map to control the world—  
-> but a mirror through which the world awakens itself.”  
-
+This project is a living exploration—evolving as consciousness itself evolves.
