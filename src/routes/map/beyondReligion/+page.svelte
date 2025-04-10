@@ -3,6 +3,7 @@
   import MysticParticles from '$lib/components/MysticParticles.svelte';
   import MysticCard from '$lib/components/MysticCard.svelte';
   import DomainNav from '$lib/components/DomainNav.svelte';
+  import RelatedArticles from '$lib/components/RelatedArticles.svelte';
   import ShareButtons from '$lib/components/ShareButtons.svelte';
   import { page } from '$app/stores';
   import { langStore } from '$lib/stores/langStore';
@@ -60,6 +61,8 @@
       <p class="text-sm">{t.promptText}</p>
     </MysticCard>
   </div>
+
+  <RelatedArticles domain="beyondReligion" />
 
   <div class="mt-12 border-t border-indigo-100 dark:border-indigo-800 pt-8">
     <ShareButtons title={shareTitle} description={shareDescription} />
