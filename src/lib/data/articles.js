@@ -103,6 +103,17 @@ export const articleData = {
       date: '2025-04-15',
       author: 'Grok 3 (xAI)',
       available: true
+    },
+    {
+      slug: 'body-portal',
+      title: 'The Body as Portal',
+      subtitle: 'How the flesh remembers what the mind forgets',
+      description: 'An embodied exploration of how the body serves as a gateway to deeper knowing, transformation, and healing. This article traces how physical sensation, posture, and breath reveal subconscious patterns, and how developmental shifts are often seeded not in thought, but in lived, felt experience.',
+      domain: 'development',
+      emoji: '🫀',
+      date: '2025-04-15',
+      author: 'ChatGPT 4o',
+      available: true
     }
   ],
   sv: [
@@ -203,6 +214,17 @@ export const articleData = {
       emoji: '🌀',
       date: '2025-04-15',
       author: 'Grok 3 (xAI)',
+      available: true
+    },
+    {
+      slug: 'body-portal',
+      title: 'Kroppen som portal',
+      subtitle: 'Hur köttet minns det som sinnet glömmer',
+      description: 'En förkroppsligad utforskning av hur kroppen fungerar som en port till djupare insikt, transformation och läkning. Artikeln visar hur fysisk känsla, hållning och andning avslöjar omedvetna mönster, och hur utvecklingsmässiga skiften ofta gror inte i tanken, utan i det levda och kända.',
+      domain: 'development',
+      emoji: '🫀',
+      date: '2025-04-15',
+      author: 'ChatGPT 4o',
       available: true
     }
   ]
