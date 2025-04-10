@@ -130,7 +130,7 @@ I en integral tidsålder manifesterar sig det heliga alltmer som:
 - Mysteriet i vetenskaplig upptäckt
 - Förundran inför evolutionär framväxt
 - Djupet i medvetandet som avslöjas i meditation
-- Medkänslan som känner inga gränser
+- Medkänslan som inte känner några gränser
 - Skönheten som får oss att stanna upp
 
 Detta eliminerar inte traditionella religiösa former utan sätter dem i ett större sammanhang. För många kommer traditionella religioner att förbli den mest meningsfulla behållaren för andligt liv. För andra är nya uttryck nödvändiga.
