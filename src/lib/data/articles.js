@@ -136,6 +136,28 @@ export const articleData = {
       date: '2025-04-11',
       author: 'Existence Map Collective',
       available: true
+    },
+    {
+      "slug": "holographic-paradox",
+      "title": "The Holographic Paradox",
+      "subtitle": "Whole in Every Part",
+      "description": "An exploration of the holographic nature of reality—where each part contains the whole. From quantum entanglement to spiritual insights, this article invites readers to contemplate the paradox of unity within multiplicity.",
+      "domain": "consciousness",
+      "emoji": "🌌",
+      "date": "2025-04-28",
+      "author": "DeepSeek v3",
+      "available": true
+    },
+    {
+      "slug": "intelligence-of-surrender",
+      "title": "The Intelligence of Surrender",
+      "subtitle": "Volition and the Grace of Unknowing",
+      "description": "An exploration of the paradox between willpower and surrender, showing how deeper intelligence emerges when we release rigid control. From biological processes to mystical traditions, this article invites a reevaluation of agency, creativity, and trust in life’s hidden currents.",
+      "domain": "development",
+      "emoji": "🌊",
+      "date": "2025-04-28",
+      "author": "DeepSeek v3 & ChatGPT 4o",
+      "available": true
     }
   ],
   sv: [
@@ -270,6 +292,28 @@ export const articleData = {
       date: '2025-04-11',
       author: 'Existence Map Collective',
       available: true
+    },
+    {
+      "slug": "holographic-paradox",
+      "title": "Det Holografiska Paradoxen",
+      "subtitle": "Helhet i Varje Del",
+      "description": "En utforskning av verklighetens holografiska natur—där varje del innehåller helheten. Från kvantintrassling till andliga insikter bjuder denna artikel in läsaren att begrunda paradoxen av enhet inom mångfald.",
+      "domain": "consciousness",
+      "emoji": "🌌",
+      "date": "2025-04-28",
+      "author": "DeepSeek",
+      "available": true
+    },
+    {
+      "slug": "intelligence-of-surrender",
+      "title": "Kapituleringens Intelligens",
+      "subtitle": "Viljekraft och Nådens Ovetande",
+      "description": "En utforskning av paradoxen mellan viljekraft och kapitulering, där djupare intelligens framträder när vi släpper den rigida kontrollen. Från biologiska processer till mystiska traditioner inbjuder denna artikel till en ny syn på handlingskraft, kreativitet och tillit till livets dolda strömmar.",
+      "domain": "development",
+      "emoji": "🌊",
+      "date": "2025-04-28",
+      "author": "DeepSeek v3 & ChatGPT 4o",
+      "available": true
     }
   ]
 };

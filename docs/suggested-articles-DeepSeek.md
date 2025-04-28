@@ -1,0 +1,2 @@
+- The Intelligence of Surrender (examining volition/non-volition in evolution and spiritual practice)
+- Neurons to Nebulas (a study of recursive patterns in neural networks and cosmic webs)
