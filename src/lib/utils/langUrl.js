@@ -1,5 +1,3 @@
-// src/lib/utils/langUrl.js
-
 /**
  * Adds the current language as a query parameter to a URL
  * @param {string} url - The URL to add the language parameter to

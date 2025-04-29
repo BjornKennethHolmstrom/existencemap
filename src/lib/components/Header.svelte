@@ -8,8 +8,8 @@
   import { page } from '$app/stores';
   import { slide } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
-  import { getRoute, addLangToRoute } from '$lib/utils/hashRoutes';
   import { getArticles } from '$lib/data/articles';
+  import { addLangParam } from '$lib/utils/langUrl'; // Import this instead
 
   // Create an optimized version of the map items that we'll use
   const mapItems = [
@@ -29,7 +29,7 @@
 
   const mainNavItems = [
     { path: 'map', emoji: '🗺️', key: 'map', hasSubmenu: true },
-    { path: 'articles', emoji: '📝', key: 'articles', hasSubmenu: true }, // Changed to hasSubmenu: true
+    { path: 'articles', emoji: '📝', key: 'articles', hasSubmenu: true },
     { path: 'contact', emoji: '✉️', key: 'contact', hasSubmenu: false },
     { path: 'about', emoji: '📖', key: 'about', hasSubmenu: false },
     { path: 'credits', emoji: '🌟', key: 'credits', hasSubmenu: false }
@@ -46,18 +46,24 @@
 
   let isDark = true;
   let mapOpen = false;
-  let articlesOpen = false; // New state for articles dropdown
+  let articlesOpen = false;
   let mobileMenuOpen = false;
+
+  // Helper function to generate direct URLs with language parameter
+  function getDirectUrl(path) {
+    const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+    return addLangParam(`${base}/${cleanPath}`, $langStore);
+  }
 
   // Precompute some URLs for better performance
   let homeUrl, mapUrl, articlesUrl, contactUrl, aboutUrl, creditsUrl;
   $: {
-    homeUrl = addLangToRoute(getRoute(''), $langStore);
-    mapUrl = addLangToRoute(getRoute('map'), $langStore);
-    articlesUrl = addLangToRoute(getRoute('articles'), $langStore);
-    contactUrl = addLangToRoute(getRoute('contact'), $langStore);
-    aboutUrl = addLangToRoute(getRoute('about'), $langStore);
-    creditsUrl = addLangToRoute(getRoute('credits'), $langStore);
+    homeUrl = getDirectUrl('');
+    mapUrl = getDirectUrl('map');
+    articlesUrl = getDirectUrl('articles');
+    contactUrl = getDirectUrl('contact');
+    aboutUrl = getDirectUrl('about');
+    creditsUrl = getDirectUrl('credits');
   }
 
   // Cache map item URLs (only recomputed when language changes)
@@ -65,14 +71,14 @@
   $: {
     mapItemUrls = mapItems.map(item => ({
       ...item,
-      url: addLangToRoute(getRoute(item.path), $langStore)
+      url: getDirectUrl(item.path)
     }));
   }
 
   // Generate article URLs
   $: articleUrls = articles.map(article => ({
     ...article,
-    url: addLangToRoute(getRoute(`articles/${article.slug}`), $langStore)
+    url: getDirectUrl(`articles/${article.slug}`)
   }));
 
   // Safe theme check and application on mount
