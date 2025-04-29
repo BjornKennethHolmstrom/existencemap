@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        // Get the current path
+        // Get the current path and search parameters
         var path = window.location.pathname;
+        var search = window.location.search;
         
         // Remove any leading slash and convert to hash route
         if (path.startsWith('/')) {
             path = path.substring(1);
         }
         
-        // Redirect to the hash-based route
-        window.location.href = '/#/' + path + window.location.search;
+        // Redirect to the hash-based route with any query parameters
+        window.location.href = '/#/' + path + search;
     </script>
 </head>
 <body>

@@ -10,11 +10,11 @@ export function getRoute(path) {
   // Clean up the path first
   const cleanPath = path.startsWith('/') ? path.substring(1) : path;
   
-  // For empty path (home), just return base
+  // For empty path (home), just return the base
   if (!cleanPath) return `${base}/`;
   
-  // Return direct path (no hashtag)
-  return `${base}/${cleanPath}`;
+  // Always return hash-based paths for consistency
+  return `${base}/#/${cleanPath}`;
 }
 
 /**

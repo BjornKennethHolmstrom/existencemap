@@ -11,24 +11,21 @@ export const trailingSlash = 'never';
 /** @type {import('./$types').LayoutLoad} */
 export function load({ url }) {
   if (browser) {
-    // Handle URL hash if present
+    // Handle URL hash if present, but avoid creating redirection loops
     const hashPath = window.location.hash.slice(1);
-    if (hashPath && hashPath !== '/' && url.pathname === '/') {
-      // If we have a hash path and we're on the homepage, navigate to that route
+    if (hashPath && hashPath !== '/' && url.pathname === '/' && !sessionStorage.getItem('processing_hash')) {
+      // Set a flag to prevent redirection loops
+      sessionStorage.setItem('processing_hash', 'true');
       goto(hashPath, { replaceState: true });
+      // Clear the flag after a short delay
+      setTimeout(() => sessionStorage.removeItem('processing_hash'), 100);
       return {};
     }
     
-    // The old redirection logic for non-hash URLs can remain as a fallback
-    const redirectPath = sessionStorage.getItem('existencemap:redirect');
-    if (redirectPath && redirectPath !== '/' && url.pathname === '/') {
-      sessionStorage.removeItem('existencemap:redirect');
-      
-      // Instead of directly navigating, convert to a hash-based route
-      const hashRoute = redirectPath.startsWith('/') ? redirectPath : '/' + redirectPath;
-      window.location.replace('/#' + hashRoute);
-      return {};
-    }
+    // Clear the flag if we're not processing a hash
+    sessionStorage.removeItem('processing_hash');
+    
+    // Rest of your existing code...
   }
   
   return {};
