@@ -156,7 +156,7 @@
         class="block font-bold py-2 border-b border-indigo-100 dark:border-indigo-800 hover:text-violet-500 transition text-violet-600 dark:text-violet-300 animate-gloat"
         on:click={() => mobileMenuOpen = false}
       >
-        🔮 {t.nav.truth}
+        🔮 {t.truth}
       </a>
 
       <!-- Map Dropdown -->
