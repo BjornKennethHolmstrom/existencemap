@@ -151,7 +151,13 @@
   <!-- Desktop Navigation -->
   <div class="hidden md:flex items-center space-x-6">
     <nav class="flex items-center space-x-6">
-      <a href={truthUrl} class="font-bold hover:text-violet-500 transition">🔮 {t.truth || 'Truth'}</a>
+      <a 
+        href="/truth" 
+        class="block font-bold py-2 border-b border-indigo-100 dark:border-indigo-800 hover:text-violet-500 transition text-violet-600 dark:text-violet-300 animate-gloat"
+        on:click={() => mobileMenuOpen = false}
+      >
+        🔮 {t.nav.truth}
+      </a>
 
       <!-- Map Dropdown -->
       <div
@@ -419,3 +425,14 @@
     </div>
   </div>
 {/if}
+
+<style>
+  @keyframes gloat {
+    0%, 100% { text-shadow: 0 0 4px rgba(147, 51, 234, 0.4); }
+    50%      { text-shadow: 0 0 10px rgba(147, 51, 234, 0.8); }
+  }
+
+  .animate-gloat {
+    animation: gloat 2.5s ease-in-out infinite;
+  }
+</style>
