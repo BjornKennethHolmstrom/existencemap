@@ -28,6 +28,7 @@
   ];
 
   const mainNavItems = [
+    { path: 'truth', emoji: '🔮', key: 'truth', hasSubmenu: false },
     { path: 'map', emoji: '🗺️', key: 'map', hasSubmenu: true },
     { path: 'articles', emoji: '📝', key: 'articles', hasSubmenu: true },
     { path: 'contact', emoji: '✉️', key: 'contact', hasSubmenu: false },
@@ -56,10 +57,11 @@
   }
 
   // Precompute some URLs for better performance
-  let homeUrl, mapUrl, articlesUrl, contactUrl, aboutUrl, creditsUrl;
+  let homeUrl, mapUrl, truthUrl, articlesUrl, contactUrl, aboutUrl, creditsUrl;
   $: {
     homeUrl = getDirectUrl('');
     mapUrl = getDirectUrl('map');
+    truthUrl = getDirectUrl('truth');
     articlesUrl = getDirectUrl('articles');
     contactUrl = getDirectUrl('contact');
     aboutUrl = getDirectUrl('about');
@@ -149,6 +151,8 @@
   <!-- Desktop Navigation -->
   <div class="hidden md:flex items-center space-x-6">
     <nav class="flex items-center space-x-6">
+      <a href={truthUrl} class="font-bold hover:text-violet-500 transition">🔮 {t.truth || 'Truth'}</a>
+
       <!-- Map Dropdown -->
       <div
         class="relative group inline-block"
@@ -386,6 +390,7 @@
           <!-- Regular Nav Item -->
           <a 
             href={
+              key === 'truth' ? truthUrl :
               key === 'articles' ? articlesUrl : 
               key === 'contact' ? contactUrl :
               key === 'about' ? aboutUrl : 
